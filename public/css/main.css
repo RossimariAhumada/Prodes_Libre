@@ -1,0 +1,277 @@
+body {
+    font-family: "Bebas Neue", Sans-serif;
+    background-color: none;
+}
+
+.navbar-brand img {
+    top: 0;
+    left: 0;
+    transform: translate(180px, 0px);
+    width: 250px;
+    height: auto;
+    -webkit-transform: translate(180px, 0px);
+    -moz-transform: translate(180px, 0px);
+    -ms-transform: translate(180px, 0px);
+    -o-transform: translate(180px, 0px);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--e-global-color-text);
+    fill: var(--e-global-color-text);
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d42b2b;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item {
+    color: var(--e-global-color-text);
+    fill: var(--e-global-color-text);
+    font-weight: bold;
+    margin: 0 10px;
+    /* Ajusta el espacio horizontal entre los elementos */
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.user-actions img {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.collapse {
+    margin-left: 400px;
+    margin-top: -20px;
+}
+
+.custom-shape-image {
+    width: 100%;
+    height: auto;
+    background-color: #f0f0f0;
+    clip-path: polygon(50% 0%, 65% 10%, 80% 20%, 85% 35%, 80% 50%, 65% 65%, 50% 80%, 35% 65%, 20% 50%, 15% 35%, 20% 20%, 35% 10%);
+}
+
+h2 {
+    font-weight: 700;
+    /* Texto en negrita */
+
+}
+
+h4,
+p {
+    font-weight: 400;
+    /* Texto regular */
+
+}
+
+.form-control[type="search"] {
+    box-shadow: none;
+    /* Elimina el box shadow */
+    outline: none;
+    /* Elimina el borde de enfoque */
+}
+
+.banner {
+    position: relative;
+    margin-top: -100px;
+    height: 65vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+
+.ods-card {
+    transition: transform 0.3s, filter 0.3s;
+    text-align: center;
+    color: white;
+    height: 300px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    border-radius: 8px;
+}
+
+.ods-card:hover {
+    transform: scale(1.05);
+    filter: brightness(85%);
+}
+
+.ods-card a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.ods-salud, .ods-hambre, .ods-pobreza, .ods-educacion {
+    background-size: cover; /* La imagen cubrirá todo el div, manteniendo su proporción */
+    background-position: center; /* Centra la imagen en el div */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100%; /* Asegura que la imagen se ajuste a la altura del div */
+    width: 100%; /* Asegura que la imagen se ajuste al ancho del div */
+    min-height: 270px; /* Establece una altura mínima, puedes ajustarla según necesites SIRVE PARA LLEVARLO EN  EL RESPONSIVE */
+}
+
+.ods-salud {
+    background-image: url('../img/SALUD_BIENESTAR.jpg');
+
+}
+
+.ods-hambre {
+    background-image: url('../img/hambre_cero.png');
+
+}
+
+.ods-pobreza {
+    background-image: url('../img/fin_de_pobreza.jpg');
+}
+
+.ods-educacion {
+    background-image: url('../img/educacion_calidad.png');
+}
+
+/* Efecto hover */
+.ods-card:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Oscurece el fondo */
+    color: white;
+    /* Cambia el color del texto a blanco */
+}
+
+.bg-custom {
+    background-color: #54595F;
+    /* Fondo gris oscuro */
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+h5 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 0;
+    line-height: 1.8;
+}
+
+.logo-img {
+    max-width: 290px;
+    /* Ajuste del tamaño del logo */
+}
+
+.social-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 10px;
+    text-align: center;
+    background-color: #d42b2b;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #ffffff;
+    color: #d42b2b;
+}
+
+i {
+    vertical-align: middle;
+}
+
+.bg-danger {
+    background-color: #d42b2b !important; /* Rojo que coincide con la imagen */
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px; /* Ajusta el tamaño de fuente según sea necesario */
+}
+
+/*****BANNER PRIMERO*****/
+.carousel-item {
+    height: 620px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.carousel-caption {
+    bottom: 30%;
+}
+
+.carousel-caption h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 1.25rem;
+}
+
+.btn-custom {
+    border: 2px solid white;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: white;
+    color: black;
+}
