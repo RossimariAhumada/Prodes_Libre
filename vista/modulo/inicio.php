@@ -43,7 +43,7 @@ include_once VISTA_PATH . 'encabezado.php';
         </div>
     </div>
     <div class="container text-center my-5">
-        <h2 class="text-danger fw-bold">ODS DESTACADOS</h2>
+        <h2 class="text-color-btn fw-bold">ODS DESTACADOS</h2>
         <p>¡Prodes Libre: proyectos sostenibles, impacto global! Únete ahora y crea un futuro mejor.</p>
         <div class="row">
             <div class="col-md-3">
@@ -87,13 +87,13 @@ include_once VISTA_PATH . 'encabezado.php';
                 <h5 class="mb-3">SÍGUENOS</h5>
                 <div class="d-flex justify-content-center">
                     <a href="#" class="social-icon">
-                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-facebook-f"><img src="<?php echo PUBLIC_PATH; ?>img/facebook.png" alt="search icon"></i>
                     </a>
                     <a href="#" class="social-icon">
-                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-instagram"><img src="<?php echo PUBLIC_PATH; ?>img/instagram.png" alt="search icon"></i>
                     </a>
                     <a href="#" class="social-icon">
-                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-twitter"><img src="<?php echo PUBLIC_PATH; ?>img/twitter.png" alt="search icon"></i>
                     </a>
                 </div>
             </div>

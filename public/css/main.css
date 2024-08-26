@@ -1,6 +1,5 @@
 body {
     font-family: "Bebas Neue", Sans-serif;
-    background-color: none;
 }
 
 .navbar-brand img {
@@ -22,7 +21,7 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-    color: #d42b2b;
+    color: #C60909;
     font-weight: bold;
 }
 
@@ -202,12 +201,12 @@ p {
 
 .social-icon {
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
     margin: 0 10px;
     text-align: center;
-    background-color: #d42b2b;
+    background-color: #C60909;
     color: white;
     border-radius: 50%;
     font-size: 20px;
@@ -215,8 +214,8 @@ p {
 }
 
 .social-icon:hover {
-    background-color: #ffffff;
-    color: #d42b2b;
+    
+    color: #C60909;
 }
 
 i {
@@ -224,7 +223,7 @@ i {
 }
 
 .bg-danger {
-    background-color: #d42b2b !important; /* Rojo que coincide con la imagen */
+    background-color: #C60909 !important; /* Rojo que coincide con la imagen */
 }
 
 .text-white {
