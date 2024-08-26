@@ -55,7 +55,20 @@ body {
     width: 100%;
     height: auto;
     background-color: #f0f0f0;
-    clip-path: polygon(50% 0%, 65% 10%, 80% 20%, 85% 35%, 80% 50%, 65% 65%, 50% 80%, 35% 65%, 20% 50%, 15% 35%, 20% 20%, 35% 10%);
+    clip-path: polygon(
+        50% 0%,    /* Punto en el centro superior */
+        65% 10%,   /* Punto en la parte superior derecha */
+        80% 20%,   /* Punto hacia abajo y a la derecha */
+        85% 35%,   /* Punto un poco más hacia abajo */
+        80% 50%,   /* Punto en el centro derecho */
+        65% 65%,   /* Punto hacia abajo y a la izquierda */
+        50% 80%,   /* Punto en el centro inferior */
+        35% 65%,   /* Punto hacia arriba y a la izquierda */
+        20% 50%,   /* Punto en el centro izquierdo */
+        15% 35%,   /* Punto un poco más arriba en el lado izquierdo */
+        20% 20%,   /* Punto hacia arriba y a la derecha */
+        35% 10%    /* Punto en la parte superior central */
+    );
 }
 
 h2 {
