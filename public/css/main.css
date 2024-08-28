@@ -55,20 +55,31 @@ body {
     width: 100%;
     height: auto;
     background-color: #f0f0f0;
-    clip-path: polygon(
-        50% 0%,    /* Punto en el centro superior */
-        65% 10%,   /* Punto en la parte superior derecha */
-        80% 20%,   /* Punto hacia abajo y a la derecha */
-        85% 35%,   /* Punto un poco más hacia abajo */
-        80% 50%,   /* Punto en el centro derecho */
-        65% 65%,   /* Punto hacia abajo y a la izquierda */
-        50% 80%,   /* Punto en el centro inferior */
-        35% 65%,   /* Punto hacia arriba y a la izquierda */
-        20% 50%,   /* Punto en el centro izquierdo */
-        15% 35%,   /* Punto un poco más arriba en el lado izquierdo */
-        20% 20%,   /* Punto hacia arriba y a la derecha */
-        35% 10%    /* Punto en la parte superior central */
-    );
+    clip-path: polygon(50% 0%,
+            /* Punto en el centro superior */
+            65% 10%,
+            /* Punto en la parte superior derecha */
+            80% 20%,
+            /* Punto hacia abajo y a la derecha */
+            85% 35%,
+            /* Punto un poco más hacia abajo */
+            80% 50%,
+            /* Punto en el centro derecho */
+            65% 65%,
+            /* Punto hacia abajo y a la izquierda */
+            50% 80%,
+            /* Punto en el centro inferior */
+            35% 65%,
+            /* Punto hacia arriba y a la izquierda */
+            20% 50%,
+            /* Punto en el centro izquierdo */
+            15% 35%,
+            /* Punto un poco más arriba en el lado izquierdo */
+            20% 20%,
+            /* Punto hacia arriba y a la derecha */
+            35% 10%
+            /* Punto en la parte superior central */
+        );
 }
 
 h2 {
@@ -92,32 +103,53 @@ p {
 
 .banner {
     position: relative;
+    background-image: url('../img/3.jpg');
     margin-top: -100px;
     height: 65vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(112, 111, 111, 0.577);
+    z-index: 1;
+    /* Coloca la capa debajo del contenido */
 }
 
+.content {
+    position: relative;
+    z-index: 2;
+    /* Asegura que el contenido esté sobre la capa */
+    text-align: center;
+    color: #fff;
+    /* Texto blanco */
+    padding: 20px;
+    top: 50%;
+    /* Mueve el texto más abajo */
+    transform: translateY(-50%);
+    /* Centra verticalmente */
+}
+
+.content .text-center {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.text-white {
+    color: #fff;
+    /* Color blanco para el texto */
+}
+
+.font-weight-bold {
+    font-weight: bold;
+    /* Texto en negrita */
+}
 
 .ods-card {
     transition: transform 0.3s, filter 0.3s;
@@ -152,13 +184,22 @@ p {
     width: 100%;
 }
 
-.ods-salud, .ods-hambre, .ods-pobreza, .ods-educacion {
-    background-size: cover; /* La imagen cubrirá todo el div, manteniendo su proporción */
-    background-position: center; /* Centra la imagen en el div */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: 100%; /* Asegura que la imagen se ajuste a la altura del div */
-    width: 100%; /* Asegura que la imagen se ajuste al ancho del div */
-    min-height: 270px; /* Establece una altura mínima, puedes ajustarla según necesites SIRVE PARA LLEVARLO EN  EL RESPONSIVE */
+.ods-salud,
+.ods-hambre,
+.ods-pobreza,
+.ods-educacion {
+    background-size: cover;
+    /* La imagen cubrirá todo el div, manteniendo su proporción */
+    background-position: center;
+    /* Centra la imagen en el div */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    height: 100%;
+    /* Asegura que la imagen se ajuste a la altura del div */
+    width: 100%;
+    /* Asegura que la imagen se ajuste al ancho del div */
+    min-height: 270px;
+    /* Establece una altura mínima, puedes ajustarla según necesites SIRVE PARA LLEVARLO EN  EL RESPONSIVE */
 }
 
 .ods-salud {
@@ -226,7 +267,7 @@ p {
 }
 
 .social-icon:hover {
-    
+
     color: #C60909;
 }
 
@@ -235,7 +276,8 @@ i {
 }
 
 .bg-danger {
-    background-color: #C60909 !important; /* Rojo que coincide con la imagen */
+    background-color: #C60909 !important;
+    /* Rojo que coincide con la imagen */
 }
 
 .text-white {
@@ -246,7 +288,8 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    font-size: 16px; /* Ajusta el tamaño de fuente según sea necesario */
+    font-size: 16px;
+    /* Ajusta el tamaño de fuente según sea necesario */
 }
 
 /*****BANNER PRIMERO*****/
