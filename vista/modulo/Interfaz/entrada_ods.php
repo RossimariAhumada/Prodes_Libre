@@ -4,7 +4,7 @@ include_once VISTA_PATH . 'encabezado.php';
 <body>
     <header class="bg-danger text-white text-center py-1">
         <h3 class="display-5 fw-bold">ODS</h3>
-        <p class="lead">Objetivos y metas de desarrollo sostenible.</p>
+        <p>Objetivos y metas de desarrollo sostenible.</p>
     </header>
 
     <section class="py-5">

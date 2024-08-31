@@ -343,7 +343,12 @@ footer {
         font-size: 16px;
     }
 }
+
+/*******************CSS ODS****************************/
 p.lead {
     font-size: 1.2rem;
     color: #6c757d;
+}
+header {
+    border-bottom: 5px solid #f5f5f5;
 }

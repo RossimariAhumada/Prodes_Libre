@@ -1,4 +1,4 @@
-<header>
+
     <!-- Primera barra de navegación con el logo, barra de búsqueda, y iconos de usuario y carrito -->
     <nav class="navbar navbar-light bg-white py-3">
         <div class="container-fluid d-flex justify-content-between align-items-center">
@@ -53,4 +53,3 @@
             </div>
         </div>
     </nav>
-</header>
