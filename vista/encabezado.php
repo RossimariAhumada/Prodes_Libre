@@ -32,10 +32,10 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link text-color-btn active" aria-current="page" href="#">INICIO</a>
+                        <a class="nav-link text-color-btn active" aria-current="page" href="<?php echo BASE_URL . 'inicio'; ?>">INICIO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ODS</a>
+                        <a class="nav-link" href="<?php echo BASE_URL . 'Interfaz' . DS . 'entrada_ods'; ?>">ODS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">ACTIVIDADES</a>

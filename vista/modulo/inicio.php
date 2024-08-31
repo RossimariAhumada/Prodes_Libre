@@ -81,7 +81,5 @@ include_once VISTA_PATH . 'encabezado.php';
             </div>
         </div>
     </div>
-    <?php
-include_once VISTA_PATH . 'pie.php';
-?>
+<?php include_once VISTA_PATH . 'pie.php';?>
 </body>
