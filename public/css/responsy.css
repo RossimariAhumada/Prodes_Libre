@@ -1,0 +1,240 @@
+    /* Responsividad para pantallas pequeñas */
+    @media (max-width: 768px) {
+        .navbar-toggler {
+            margin-right: 0;
+        }
+
+        .navbar-nav {
+            text-align: center;
+        }
+
+        .navbar-nav .nav-link {
+            margin: 10px 0;
+        }
+
+        .user-actions {
+            margin: 10px 0;
+        }
+
+        .user-actions img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .contact-icon {
+            width: 16px;
+        }
+
+        .fas {
+            font-size: 16px;
+        }
+    }
+
+    /* Media Queries para hacer el diseño responsivo */
+
+    /* Para pantallas medianas (tabletas en orientación horizontal y pantallas grandes) */
+    @media (max-width: 1200px) {
+        .custom-col {
+            flex: 0 0 25%;
+            /* Ancho del 25% */
+        }
+    }
+
+    /* Para pantallas pequeñas (tabletas en orientación vertical) */
+    @media (max-width: 992px) {
+        .custom-col {
+            flex: 0 0 33.33%;
+            /* Ancho del 33.33% */
+        }
+    }
+
+    /* Para pantallas más pequeñas (móviles en orientación horizontal) */
+    @media (max-width: 768px) {
+        .custom-col {
+            flex: 0 0 50%;
+            /* Ancho del 50% */
+        }
+    }
+
+    /* Para pantallas muy pequeñas (móviles en orientación vertical) */
+    @media (max-width: 576px) {
+        .custom-col {
+            flex: 0 0 100%;
+            /* Ancho del 100% */
+        }
+    }
+
+
+
+    /****************BANNER*********************/
+
+    @media (max-width: 768px) {
+        .banner {
+            background-size: cover;
+            /* Muestra la imagen completa en dispositivos móviles */
+            background-position: center;
+            min-height: 300px;
+            /* Ajusta la altura mínima para dispositivos móviles */
+        }
+
+        .banner h2 {
+            font-size: 1.5rem;
+            /* Ajusta el tamaño de la fuente para dispositivos móviles */
+            margin-bottom: 10px;
+        }
+
+        .banner p {
+            font-size: 1rem;
+            /* Ajusta el tamaño de la fuente para dispositivos móviles */
+            margin-bottom: 15px;
+        }
+
+        .btn-color-btn {
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+    }
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Capa semitransparente */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .content {
+        z-index: 2;
+        padding: 20px;
+        /* Agrega un poco de espacio interior para los dispositivos móviles */
+    }
+
+    @media (max-width: 390px) {
+        .banner {
+            background-size: cover;
+            /* Muestra la imagen completa en el iPhone 12 */
+            background-position: center;
+            min-height: 500px;
+            /* Altura ajustada para el iPhone 12 */
+        }
+
+        .banner h2 {
+            font-size: 2.2rem;
+            /* Ajuste del tamaño de la fuente para iPhone 12 */
+            margin-bottom: 20px;
+        }
+
+        .banner p {
+            font-size: 1.4rem;
+            /* Ajuste del tamaño de la fuente para iPhone 12 */
+            margin-bottom: 25px;
+        }
+
+    }
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Capa semitransparente */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .content {
+        z-index: 2;
+        padding: 30px;
+        /* Espacio interior para mejorar la legibilidad en iPhone 12 */
+    }
+
+    h2,
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    /* Ajustes para pantallas pequeñas */
+    @media (max-width: 576px) {
+
+        .ods-salud,
+        .ods-hambre,
+        .ods-pobreza,
+        .ods-educacion {
+            background-size: contain;
+            height: 200px;
+            /* Ajusta la altura según tus necesidades */
+        }
+
+        .ods-card:hover {
+            transform: none;
+            filter: none;
+        }
+
+    }
+
+
+    @media only screen and (min-width: 360px) and (max-width: 640px) {
+
+        /* Barra de búsqueda y botón ocupan todo el ancho */
+        #search-form {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        #search-input {
+            width: 100%;
+            border-radius: 30px 30px 0 0;
+        }
+
+        #search-button {
+            width: 100%;
+            border-radius: 0 0 30px 30px;
+        }
+
+        /* Iconos de carrito y usuario en una nueva línea */
+        #icon-container {
+            width: 100%;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        #icon-container img {
+            margin: 0 10px;
+        }
+
+        /*******banner*****/
+        #sostenibilidadCarousel img {
+            height: 600px;
+            max-height: 1000px;
+            /* Ajusta la altura máxima para mantener la imagen visible */
+            object-fit: cover;
+        }
+
+        #sostenibilidadCarousel .carousel-caption {
+            padding-bottom: 20px;
+        }
+
+        #sostenibilidadCarousel h1 {
+            font-size: 1.5rem;
+            line-height: 1.3;
+            margin: 10px 0;
+        }
+
+        #sostenibilidadCarousel p {
+            font-size: 1rem;
+            margin: 5px 0 15px;
+        }
+
+        #sostenibilidadCarousel .btn-custom {
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+    }

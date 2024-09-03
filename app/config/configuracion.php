@@ -1,5 +1,5 @@
 <?php
-define('BASE_URL', 'http://localhost/Prodes_Libre/');
+define('BASE_URL', 'http://192.168.137.5/Prodes_Libre/');
 define('PUBLIC_PATH', BASE_URL . 'public/');
 define('PUBLIC_PATH_NODES', BASE_URL . 'node_modules/');
 define('DEFAULT_MODULO', 'inicio');

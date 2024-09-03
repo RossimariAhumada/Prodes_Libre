@@ -4,78 +4,83 @@ body {
 
 /* Logo */
 .navbar-brand img {
-    width: 200px; /* Ajustado para un header más compacto */
+    width: 200px;
+    /* Ajustado para un header más compacto */
     height: auto;
 }
 
 /* Barra de navegación */
 .navbar-nav .nav-link.active {
-    color: #C60909; /* Color rojo para el enlace activo */
+    color: #C60909;
+    /* Color rojo para el enlace activo */
     font-weight: bold;
 }
 
 .navbar-nav .nav-link {
-    color: #333; /* Color gris para los enlaces por defecto */
+    color: #333;
+    /* Color gris para los enlaces por defecto */
     font-weight: bold;
-    margin: 0 15px; /* Espaciado entre los ítems de la navegación */
-    transition: color 0.3s ease; /* Transición suave al cambiar el color */
+    margin: 0 15px;
+    /* Espaciado entre los ítems de la navegación */
+    transition: color 0.3s ease;
+    /* Transición suave al cambiar el color */
 }
 
 .navbar-nav .nav-link:hover {
-    color: #C60909; /* Color rojo al hacer hover */
+    color: #C60909;
+    /* Color rojo al hacer hover */
 }
 
 /* Header */
 .navbar {
-    padding: 10px 0; /* Reducir el padding para hacer el header más pequeño */
+    padding: 10px 0;
+    /* Reducir el padding para hacer el header más pequeño */
 }
 
 /* Iconos de usuario y carrito */
 .user-actions img {
-    width: 24px; /* Ajustar el tamaño de los iconos para un header más pequeño */
+    width: 24px;
+    /* Ajustar el tamaño de los iconos para un header más pequeño */
     height: 24px;
-    margin-left: 10px; /* Espaciado entre los íconos */
+    margin-left: 10px;
+    /* Espaciado entre los íconos */
     cursor: pointer;
 }
 
 /* Estilos del formulario de búsqueda */
 form .form-control {
-    border-radius: 30px;
-    height: 36px; /* Reducir la altura de la barra de búsqueda */
+    width: 65%;
+    border-radius: 30px 0 0 30px;
 }
 
-form button {
+form .btn {
     background-color: #C60909;
-    border-radius: 30px;
-    height: 36px; /* Alinear el botón con la barra de búsqueda */
-}
-
-/* Responsividad para pantallas pequeñas */
-@media (max-width: 768px) {
-    .navbar-toggler {
-        margin-right: 0;
-    }
-
-    .navbar-nav {
-        text-align: center;
-    }
-
-    .navbar-nav .nav-link {
-        margin: 10px 0;
-    }
-
-    .user-actions {
-        margin: 10px 0;
-    }
-
-    .user-actions img {
-        width: 24px;
-        height: 24px;
-    }
+    height: 46px;
+    border-radius: 0px 10px 10px 0px;
+    -webkit-border-radius: 0px 10px 10px 0px;
+    -moz-border-radius: 0px 10px 10px 0px;
+    -ms-border-radius: 0px 10px 10px 0px;
+    -o-border-radius: 0px 10px 10px 0px;
 }
 
 
+.img-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    overflow: hidden;
+}
 
+.img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ajusta la imagen para que se vea completa */
+}
 
 .custom-shape-image {
     width: 100%;
@@ -228,6 +233,19 @@ p {
     /* Establece una altura mínima, puedes ajustarla según necesites SIRVE PARA LLEVARLO EN  EL RESPONSIVE */
 }
 
+.ods-salud,
+.ods-hambre,
+.ods-pobreza,
+.ods-educacion {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    /* Puedes ajustar la altura según tus necesidades */
+    width: 100%;
+    /* Puedes ajustar el ancho según tus necesidades */
+}
+
 .ods-salud {
     background-image: url('../img/SALUD_BIENESTAR.jpg');
 
@@ -361,20 +379,14 @@ footer {
     height: auto;
 }
 
-@media (max-width: 576px) {
-    .contact-icon {
-        width: 16px;
-    }
-    .fas {
-        font-size: 16px;
-    }
-}
+
 
 /****************** ODS ****************************/
 p.lead {
     font-size: 1.2rem;
     color: #6c757d;
 }
+
 header {
     border-bottom: 5px solid #f5f5f5;
 }
@@ -382,88 +394,85 @@ header {
 
 /************* TARJETAS DE ACTIVIDAD ********************/
 .custom-container {
-    margin: 20px; /* Margen del contenedor */
+    margin: 20px;
+    /* Margen del contenedor */
     display: flex;
-    justify-content: center; /* Centra el contenido del contenedor */
+    justify-content: center;
+    /* Centra el contenido del contenedor */
 }
 
 .inner-container {
-    width: 100%; /* Asegura que el contenedor interior ocupe todo el ancho disponible */
+    width: 100%;
+    /* Asegura que el contenedor interior ocupe todo el ancho disponible */
 }
 
 .custom-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; /* Espacio entre tarjetas */
-    justify-content: center; /* Centra las tarjetas dentro de la fila */
+    gap: 15px;
+    /* Espacio entre tarjetas */
+    justify-content: center;
+    /* Centra las tarjetas dentro de la fila */
 }
 
 .custom-col {
-    flex: 0 0 20%; /* Ancho fijo del 20% */
-    padding: 0; /* Sin padding para ajustar el espacio entre tarjetas */
+    flex: 0 0 20%;
+    /* Ancho fijo del 20% */
+    padding: 0;
+    /* Sin padding para ajustar el espacio entre tarjetas */
 }
 
 .custom-card {
     transition: box-shadow 0.3s ease;
-    border: 1px solid #ddd; /* Borde opcional */
-    border-radius: 8px; /* Bordes redondeados */
+    border: 1px solid #ddd;
+    /* Borde opcional */
+    border-radius: 8px;
+    /* Bordes redondeados */
 }
 
 .custom-card-body {
-    padding: 15px; /* Espacio interno dentro de la tarjeta */
+    padding: 15px;
+    /* Espacio interno dentro de la tarjeta */
 }
 
 .custom-card img {
-    width: 100%; /* Ajusta la imagen al ancho de la tarjeta */
-    border-bottom: 1px solid #ddd; /* Borde inferior opcional para separar la imagen del contenido */
-    cursor: pointer; /* Cambia el cursor a pointer cuando pasa sobre la imagen */
+    width: 100%;
+    /* Ajusta la imagen al ancho de la tarjeta */
+    border-bottom: 1px solid #ddd;
+    /* Borde inferior opcional para separar la imagen del contenido */
+    cursor: pointer;
+    /* Cambia el cursor a pointer cuando pasa sobre la imagen */
 }
 
 .custom-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra gris */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra gris */
 }
 
 .custom-card-title {
-    color: #d42b2b; /* Color rojo */
+    color: #d42b2b;
+    /* Color rojo */
     font-weight: bold;
 }
 
 .custom-card-link {
-    color: #d42b2b; /* Color rojo */
+    color: #d42b2b;
+    /* Color rojo */
     font-weight: bold;
-    text-decoration: none; /* Quitar subrayado */
+    text-decoration: none;
+    /* Quitar subrayado */
 }
 
 .custom-card-link:hover {
     text-decoration: underline;
 }
 
-/* Media Queries para hacer el diseño responsivo */
-
-/* Para pantallas medianas (tabletas en orientación horizontal y pantallas grandes) */
-@media (max-width: 1200px) {
-    .custom-col {
-        flex: 0 0 25%; /* Ancho del 25% */
-    }
-}
-
-/* Para pantallas pequeñas (tabletas en orientación vertical) */
-@media (max-width: 992px) {
-    .custom-col {
-        flex: 0 0 33.33%; /* Ancho del 33.33% */
-    }
-}
-
-/* Para pantallas más pequeñas (móviles en orientación horizontal) */
-@media (max-width: 768px) {
-    .custom-col {
-        flex: 0 0 50%; /* Ancho del 50% */
-    }
-}
-
-/* Para pantallas muy pequeñas (móviles en orientación vertical) */
-@media (max-width: 576px) {
-    .custom-col {
-        flex: 0 0 100%; /* Ancho del 100% */
-    }
+.banner {
+    background-image: url('../img/3.jpg');
+    background-size: cover;
+    /* Asegura que la imagen de fondo cubra todo el banner */
+    background-position: center;
+    min-height: 400px;
+    /* Altura del banner */
+    position: relative;
 }

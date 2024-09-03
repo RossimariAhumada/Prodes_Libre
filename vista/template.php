@@ -8,6 +8,7 @@
     <link rel="shorcut icon" href="<?php echo PUBLIC_PATH; ?>img/icono.png" />
     <link rel="stylesheet" href="<?php echo PUBLIC_PATH; ?>css/styles.css" />
     <link rel="stylesheet" href="<?php echo PUBLIC_PATH; ?>css/main.css" />
+    <link rel="stylesheet" href="<?php echo PUBLIC_PATH; ?>css/responsy.css" />
 </head>
 
 <body>
