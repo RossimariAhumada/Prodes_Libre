@@ -10,7 +10,7 @@
             <input class="form-control form-control-lg me-0" type="search" placeholder="Buscar.." aria-label="Search"
                 id="search-input">
             <button class="btn btn-color-btn" type="submit" id="search-button">
-                <img src="<?php echo PUBLIC_PATH; ?>img/lupa.png" alt="search icon" style="width: 24px;">
+                <img src="<?php echo PUBLIC_PATH; ?>img/lupa.png" alt="search icon">
             </button>
             <!-- Iconos de carrito y usuario -->
             <div class="d-flex align-items-center m-2" id="icon-container">
@@ -33,28 +33,38 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link text-color-btn active" aria-current="page"
-                        href="<?php echo BASE_URL . 'inicio'; ?>" style="color: #C60909; font-weight: bold;">INICIO</a>
+                    <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'inicio') ? 'active' : ''; ?>"
+                        href="<?php echo BASE_URL . 'inicio'; ?>">INICIO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo BASE_URL . 'Category' . DS . 'entrada_ods'; ?>"
-                        style="color: #333; font-weight: bold;">ODS</a>
+                    <!-- Verifica si la página actual es 'inicio' y añade la clase 'active' si es así -->
+                    <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'entrada_ods') ? 'active' : ''; ?>"
+                        href="<?php echo BASE_URL . 'Category' . DS . 'entrada_ods'; ?>">ODS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo BASE_URL . 'Category' . DS . 'actividades'; ?>"
-                        style="color: #333; font-weight: bold;">ACTIVIDADES</a>
+                    <!-- Verifica si la página actual es 'entrada_ods' y añade la clase 'active' si es así -->
+                    <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'actividades') ? 'active' : ''; ?>"
+                        href="<?php echo BASE_URL . 'Category' . DS . 'actividades'; ?>">ACTIVIDADES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color: #333; font-weight: bold;">AVANCES</a>
+                    <!-- Verifica si la página actual es 'avances' y añade la clase 'active' si es así -->
+                    <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'avances') ? 'active' : ''; ?>"
+                        href="#">AVANCES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color: #333; font-weight: bold;">NOTICIAS</a>
+                    <!-- Verifica si la página actual es 'noticias' y añade la clase 'active' si es así -->
+                    <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'noticias') ? 'active' : ''; ?>"
+                        href="#">NOTICIAS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color: #333; font-weight: bold;">BANCOS</a>
+                    <!-- Verifica si la página actual es 'bancos' y añade la clase 'active' si es así -->
+                    <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'bancos') ? 'active' : ''; ?>"
+                        href="#">BANCOS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color: #333; font-weight: bold;">CONTACTO</a>
+                    <!-- Verifica si la página actual es 'contacto' y añade la clase 'active' si es así -->
+                    <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'contacto') ? 'active' : ''; ?>"
+                        href="#">CONTACTO</a>
                 </li>
             </ul>
         </div>

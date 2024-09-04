@@ -5,38 +5,31 @@ body {
 /* Logo */
 .navbar-brand img {
     width: 200px;
-    /* Ajustado para un header más compacto */
     height: auto;
 }
 
-/* Barra de navegación */
-.navbar-nav .nav-link.active {
-    color: #C60909;
-    /* Color rojo para el enlace activo */
-    font-weight: bold;
-}
-
+/* Estilos para enlaces de navegación */
 .navbar-nav .nav-link {
     color: #333;
-    /* Color gris para los enlaces por defecto */
     font-weight: bold;
     margin: 0 15px;
-    /* Espaciado entre los ítems de la navegación */
     transition: color 0.3s ease;
-    /* Transición suave al cambiar el color */
 }
 
-.navbar-nav .nav-link:hover {
-    color: #C60909;
-    /* Color rojo al hacer hover */
+.navbar-light .navbar-nav .nav-link.nav-hover {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link.nav-hover.active {
+    color: #C60909 !important; /* Color rojo para el enlace activo */
+    font-weight: bold;
 }
 
 /* Header */
 .navbar {
     padding: 10px 0;
-    /* Reducir el padding para hacer el header más pequeño */
 }
-
 /* Iconos de usuario y carrito */
 .user-actions img {
     width: 24px;
