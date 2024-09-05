@@ -7,7 +7,7 @@
         </a>
         <!-- Barra de búsqueda -->
         <form class="d-flex flex-grow-1 justify-content-center mx-5" id="search-form">
-            <input class="form-control form-control-lg me-0" type="search" placeholder="Buscar.." aria-label="Search"
+            <input class="form-control form-control-lg me-0" type="search" placeholder="Buscar..." aria-label="Search"
                 id="search-input">
             <button class="btn btn-color-btn" type="submit" id="search-button">
                 <img src="<?php echo PUBLIC_PATH; ?>img/lupa.png" alt="search icon">
@@ -17,8 +17,7 @@
                 <img src="<?php echo PUBLIC_PATH; ?>img/bolsa.png" alt="Carrito" class="me-3" style="width: 30px;">
                 <img src="<?php echo PUBLIC_PATH; ?>img/usuario.png" alt="Login" style="width: 30px;">
             </div>
-    </div>
-    </form>
+        </form>
 </nav>
 
 <!-- Segunda barra de navegación con los enlaces -->
@@ -32,8 +31,9 @@
         <!-- Enlaces de navegación -->
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
+                <!-- Verifica si la página actual es 'inicio' o '/Prodes_Libre/' y añade la clase 'active' si es así -->
                 <li class="nav-item">
-                    <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'inicio') ? 'active' : ''; ?>"
+                    <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'inicio' || $_SERVER['REQUEST_URI'] == '/Prodes_Libre/') ? 'active' : ''; ?>"
                         href="<?php echo BASE_URL . 'inicio'; ?>">INICIO</a>
                 </li>
                 <li class="nav-item">
@@ -49,12 +49,12 @@
                 <li class="nav-item">
                     <!-- Verifica si la página actual es 'avances' y añade la clase 'active' si es así -->
                     <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'avances') ? 'active' : ''; ?>"
-                        href="#">AVANCES</a>
+                        href="<?php echo BASE_URL . 'Category' . DS . 'avances'; ?>">AVANCES</a>
                 </li>
                 <li class="nav-item">
                     <!-- Verifica si la página actual es 'noticias' y añade la clase 'active' si es así -->
                     <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'noticias') ? 'active' : ''; ?>"
-                        href="#">NOTICIAS</a>
+                        href="<?php echo BASE_URL . 'Category' . DS . 'noticias'; ?>">NOTICIAS</a>
                 </li>
                 <li class="nav-item">
                     <!-- Verifica si la página actual es 'bancos' y añade la clase 'active' si es así -->
@@ -64,7 +64,7 @@
                 <li class="nav-item">
                     <!-- Verifica si la página actual es 'contacto' y añade la clase 'active' si es así -->
                     <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'contacto') ? 'active' : ''; ?>"
-                        href="#">CONTACTO</a>
+                        href="<?php echo BASE_URL . 'Category' . DS . 'contacto'; ?>">CONTACTO</a>
                 </li>
             </ul>
         </div>

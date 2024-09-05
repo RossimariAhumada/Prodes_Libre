@@ -443,13 +443,13 @@ header {
 }
 
 .custom-card-title {
-    color: #d42b2b;
+    color: #C60909;
     /* Color rojo */
     font-weight: bold;
 }
 
 .custom-card-link {
-    color: #d42b2b;
+    color: #C60909;
     /* Color rojo */
     font-weight: bold;
     text-decoration: none;
@@ -468,4 +468,49 @@ header {
     min-height: 400px;
     /* Altura del banner */
     position: relative;
+}
+
+
+/******* AVANCES *******/
+/* Estilo para ajustar el margen inferior entre campos */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Estilo de los inputs personalizados */
+.custom-form-control {
+    border: 1px solid #C60909;
+    /*Borderojo*/border-radius: 1px;
+    padding: 8px;
+    width: 100%;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+}
+
+/* Alinear el textarea proporcionalmente al tamaño de los inputs */
+textarea.custom-form-control {
+    width: 100%;
+    resize: none; /* Evitar que el textarea sea redimensionable */
+}
+
+/* Estilo del botón de envío */
+.btn-block {
+    background-color: #C60909;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Estilo del label */
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Reducir padding lateral entre las columnas del grid */
+.row .col-md-6 {
+    padding-left: 5px;
+    padding-right: 5px;
 }

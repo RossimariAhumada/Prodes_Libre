@@ -1,6 +1,14 @@
 Options -MultiViews
 RewriteEngine On
+
+# Excluir resultados.php del rewrite
+RewriteCond %{REQUEST_URI} ^/Category/resultados$ [NC]
+RewriteRule ^ - [L]
+
+# Continuar con las condiciones normales
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
-Rewriterule ^(.+)$ index.php?url=$1 [QSA,L]
+
+# Reescribir cualquier otra URL a index.php
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
