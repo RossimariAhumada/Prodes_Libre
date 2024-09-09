@@ -50,7 +50,7 @@ include_once VISTA_PATH . 'encabezado.php';
                 Finnibus Bonorum et Malorum» (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de
                 Cristo. Este libro es un tratado de teoría de éticas, muy popular durante el Renacimiento. La primera
                 línea del Lorem Ipsum, «Lorem ipsum dolor sit amet..», viene de una línea en la sección 1.10.32.</p>
-                
+
             <!-- Botones de navegación Anterior y Siguiente -->
             <div class="d-flex justify-content-between my-4">
                 <a href="<?php echo BASE_URL . 'entrada-ods' . DS . 'hambre-cero'; ?>"
@@ -59,7 +59,6 @@ include_once VISTA_PATH . 'encabezado.php';
                     <br>
                     <span class="small">Hambre cero</span>
                 </a>
-
             </div>
         </div>
 
