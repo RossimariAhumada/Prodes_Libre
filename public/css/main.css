@@ -514,3 +514,64 @@ label {
     padding-left: 5px;
     padding-right: 5px;
 }
+
+/************* ODS CARDS VERTICAL *********/
+.ods-new-card {
+    transition: transform 0.3s, filter 0.3s;
+    text-align: center;
+    color: white;
+    height: 270px; /* Ajusta la altura al tamaño de la imagen */
+    width: 270px; /* Añade un ancho fijo para que sea un cuadrado */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    border-radius: 8px;
+    margin: 0 auto 1.5rem; /* Centra la carta y añade margen inferior */
+}
+
+.ods-new-card:hover {
+    transform: scale(1.05);
+    filter: brightness(85%);
+}
+
+.ods-new-card a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.ods-new-salud {
+    background-image: url('../img/SALUD_BIENESTAR.jpg');
+}
+
+.ods-new-hambre {
+    background-image: url('../img/hambre_cero.png');
+}
+
+.ods-new-pobreza {
+    background-image: url('../img/fin_de_pobreza.jpg');
+}
+
+.ods-new-educacion {
+    background-image: url('../img/educacion_calidad.png');
+    margin-bottom: 2rem; /* Añade un margen extra a la última carta */
+}
+p {
+    margin-bottom: 10px; /* Ajusta según el espacio que prefieras */
+}
+
+.small-space {
+    margin-bottom: 15px; /* Ajusta el valor según el espacio que desees */
+    text-align: justify;
+  }

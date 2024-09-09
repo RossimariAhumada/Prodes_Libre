@@ -1,9 +1,5 @@
-Options -MultiViews
+Options -Indexes
 RewriteEngine On
-
-# Excluir resultados.php del rewrite
-RewriteCond %{REQUEST_URI} ^/Category/resultados$ [NC]
-RewriteRule ^ - [L]
 
 # Continuar con las condiciones normales
 RewriteCond %{REQUEST_FILENAME} !-d

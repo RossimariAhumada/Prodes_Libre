@@ -26,32 +26,36 @@ include_once VISTA_PATH . 'encabezado.php';
         <h2 class="text-color-btn fw-bold"></h2>
         <div class="row">
             <div class="col-12 col-sm-6 col-md-3 mb-4">
-                <div class="ods-card ods-salud">
-                    <a href="#">
+                <div class="ods-card ods-pobreza">
+                    <a href="<?php echo BASE_URL . 'entrada-ods' . DS . 'fin-de-la-pobreza'; ?>">
                         <div class="display-4"></div>
                         <div></div>
                     </a>
                 </div>
             </div>
+
             <div class="col-12 col-sm-6 col-md-3 mb-4">
                 <div class="ods-card ods-hambre">
-                    <a href="#">
+                    <a href="<?php echo BASE_URL . 'entrada-ods' . DS . 'hambre-cero'; ?>#">
                         <div class="display-4"></div>
                         <div></div>
                     </a>
                 </div>
             </div>
+
             <div class="col-12 col-sm-6 col-md-3 mb-4">
-                <div class="ods-card ods-pobreza">
-                    <a href="#">
+                <div class="ods-card ods-salud">
+                    <a href="<?php echo BASE_URL . 'entrada-ods' . DS . 'salud-y-bienestar'; ?>">
                         <div class="display-4"></div>
                         <div></div>
                     </a>
                 </div>
             </div>
+            
+
             <div class="col-12 col-sm-6 col-md-3 mb-4">
                 <div class="ods-card ods-educacion">
-                    <a href="#">
+                    <a href="<?php echo BASE_URL . 'entrada-ods' . DS . 'calidad-de-educacion'; ?>">
                         <div class="display-4"></div>
                         <div></div>
                     </a>

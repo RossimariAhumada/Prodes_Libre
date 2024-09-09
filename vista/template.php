@@ -19,6 +19,6 @@
     ?>
     <script src="<?php echo PUBLIC_PATH_NODES; ?>bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="<?php echo PUBLIC_PATH; ?>js/encabezado_estado_nav.js"></script>
-    <script src="<?php echo PUBLIC_PATH; ?>js/busqueda_interna.js"></script>
+   <!-- <script src="<?php echo PUBLIC_PATH; ?>js/busqueda_interna.js"></script>-->
 </body>
 </html>
