@@ -6,7 +6,7 @@ include_once VISTA_PATH . 'encabezado.php';
     <div id="sostenibilidadCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="<?php echo PUBLIC_PATH; ?>img/2.jpg" alt="Banner de Sostenibilidad" class="d-block w-100">
+                <img src="<?php echo PUBLIC_PATH; ?>img/banner-1.png" alt="Banner de Sostenibilidad" class="d-block w-100">
                 <div class="carousel-caption d-flex flex-column align-items-center">
                     <h1 class="text-center">La sostenibilidad no es una opción, es una responsabilidad</h1>
                     <p class="text-center">Pequeñas acciones hoy, grandes cambios mañana.</p>
@@ -85,7 +85,6 @@ include_once VISTA_PATH . 'encabezado.php';
                     </a>
                 </div>
             </div>
-
         </div>
     </div>
 
