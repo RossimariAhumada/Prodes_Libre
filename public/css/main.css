@@ -1,0 +1,577 @@
+body {
+    font-family: "Bebas Neue", Sans-serif;
+}
+
+/* Logo */
+.navbar-brand img {
+    width: 200px;
+    height: auto;
+}
+
+/* Estilos para enlaces de navegación */
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link.nav-hover {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link.nav-hover.active {
+    color: #C60909 !important; /* Color rojo para el enlace activo */
+    font-weight: bold;
+}
+
+/* Header */
+.navbar {
+    padding: 10px 0;
+}
+/* Iconos de usuario y carrito */
+.user-actions img {
+    width: 24px;
+    /* Ajustar el tamaño de los iconos para un header más pequeño */
+    height: 24px;
+    margin-left: 10px;
+    /* Espaciado entre los íconos */
+    cursor: pointer;
+}
+
+/* Estilos del formulario de búsqueda */
+form .form-control {
+    width: 65%;
+    border-radius: 30px 0 0 30px;
+}
+
+form .btn {
+    background-color: #C60909;
+    height: 46px;
+    border-radius: 0px 10px 10px 0px;
+    -webkit-border-radius: 0px 10px 10px 0px;
+    -moz-border-radius: 0px 10px 10px 0px;
+    -ms-border-radius: 0px 10px 10px 0px;
+    -o-border-radius: 0px 10px 10px 0px;
+}
+
+
+.img-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ajusta la imagen para que se vea completa */
+}
+
+.custom-shape-image {
+    width: 100%;
+    height: auto;
+    background-color: #f0f0f0;
+    clip-path: polygon(50% 0%,
+            /* Punto en el centro superior */
+            65% 10%,
+            /* Punto en la parte superior derecha */
+            80% 20%,
+            /* Punto hacia abajo y a la derecha */
+            85% 35%,
+            /* Punto un poco más hacia abajo */
+            80% 50%,
+            /* Punto en el centro derecho */
+            65% 65%,
+            /* Punto hacia abajo y a la izquierda */
+            50% 80%,
+            /* Punto en el centro inferior */
+            35% 65%,
+            /* Punto hacia arriba y a la izquierda */
+            20% 50%,
+            /* Punto en el centro izquierdo */
+            15% 35%,
+            /* Punto un poco más arriba en el lado izquierdo */
+            20% 20%,
+            /* Punto hacia arriba y a la derecha */
+            35% 10%
+            /* Punto en la parte superior central */
+        );
+}
+
+h2 {
+    font-weight: 700;
+    /* Texto en negrita */
+}
+
+h4,
+p {
+    font-weight: 400;
+    /* Texto regular */
+
+}
+
+.form-control[type="search"] {
+    box-shadow: none;
+    /* Elimina el box shadow */
+    outline: none;
+    /* Elimina el borde de enfoque */
+}
+
+.banner {
+    position: relative;
+    background-image: url('../img/3.jpg');
+    margin-top: -100px;
+    height: 65vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(112, 111, 111, 0.577);
+    z-index: 1;
+    /* Coloca la capa debajo del contenido */
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    /* Asegura que el contenido esté sobre la capa */
+    text-align: center;
+    color: #fff;
+    /* Texto blanco */
+    padding: 20px;
+    top: 50%;
+    /* Mueve el texto más abajo */
+    transform: translateY(-50%);
+    /* Centra verticalmente */
+}
+
+.content .text-center {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.text-white {
+    color: #fff;
+    /* Color blanco para el texto */
+}
+
+.font-weight-bold {
+    font-weight: bold;
+    /* Texto en negrita */
+}
+
+.ods-card {
+    transition: transform 0.3s, filter 0.3s;
+    text-align: center;
+    color: white;
+    height: 300px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    border-radius: 8px;
+}
+
+.ods-card:hover {
+    transform: scale(1.05);
+    filter: brightness(85%);
+}
+
+.ods-card a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.ods-salud,
+.ods-hambre,
+.ods-pobreza,
+.ods-educacion {
+    background-size: cover;
+    /* La imagen cubrirá todo el div, manteniendo su proporción */
+    background-position: center;
+    /* Centra la imagen en el div */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    height: 100%;
+    /* Asegura que la imagen se ajuste a la altura del div */
+    width: 100%;
+    /* Asegura que la imagen se ajuste al ancho del div */
+    min-height: 270px;
+    /* Establece una altura mínima, puedes ajustarla según necesites SIRVE PARA LLEVARLO EN  EL RESPONSIVE */
+}
+
+.ods-salud,
+.ods-hambre,
+.ods-pobreza,
+.ods-educacion {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    /* Puedes ajustar la altura según tus necesidades */
+    width: 100%;
+    /* Puedes ajustar el ancho según tus necesidades */
+}
+
+.ods-salud {
+    background-image: url('../img/SALUD_BIENESTAR.jpg');
+
+}
+
+.ods-hambre {
+    background-image: url('../img/hambre_cero.png');
+
+}
+
+.ods-pobreza {
+    background-image: url('../img/fin_de_pobreza.jpg');
+}
+
+.ods-educacion {
+    background-image: url('../img/educacion_calidad.png');
+}
+
+/* Efecto hover */
+.ods-card:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Oscurece el fondo */
+    color: white;
+    /* Cambia el color del texto a blanco */
+}
+
+.bg-custom {
+    background-color: #54595F;
+    /* Fondo gris oscuro */
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+h5 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 0;
+    line-height: 1.8;
+}
+
+.logo-img {
+    max-width: 290px;
+    /* Ajuste del tamaño del logo */
+}
+
+.social-icon {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    margin: 0 10px;
+    text-align: center;
+    background-color: #C60909;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+
+    color: #C60909;
+}
+
+i {
+    vertical-align: middle;
+}
+
+.bg-danger {
+    background-color: #C60909 !important;
+    /* Rojo que coincide con la imagen */
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+    /* Ajusta el tamaño de fuente según sea necesario */
+}
+
+/*****BANNER PRIMERO*****/
+.carousel-item {
+    height: 620px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.carousel-caption {
+    bottom: 30%;
+}
+
+.carousel-caption h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 1.25rem;
+}
+
+.btn-custom {
+    border: 2px solid white;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: white;
+    color: black;
+}
+
+.contact-icon {
+    width: 20px;
+    height: auto;
+}
+
+
+
+/****************** ODS ****************************/
+p.lead {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+header {
+    border-bottom: 5px solid #f5f5f5;
+}
+
+
+/************* TARJETAS DE ACTIVIDAD ********************/
+.custom-container {
+    margin: 20px;
+    /* Margen del contenedor */
+    display: flex;
+    justify-content: center;
+    /* Centra el contenido del contenedor */
+}
+
+.inner-container {
+    width: 100%;
+    /* Asegura que el contenedor interior ocupe todo el ancho disponible */
+}
+
+.custom-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* Espacio entre tarjetas */
+    justify-content: center;
+    /* Centra las tarjetas dentro de la fila */
+}
+
+.custom-col {
+    flex: 0 0 20%;
+    /* Ancho fijo del 20% */
+    padding: 0;
+    /* Sin padding para ajustar el espacio entre tarjetas */
+}
+
+.custom-card {
+    transition: box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+    /* Borde opcional */
+    border-radius: 8px;
+    /* Bordes redondeados */
+}
+
+.custom-card-body {
+    padding: 15px;
+    /* Espacio interno dentro de la tarjeta */
+}
+
+.custom-card img {
+    width: 100%;
+    /* Ajusta la imagen al ancho de la tarjeta */
+    border-bottom: 1px solid #ddd;
+    /* Borde inferior opcional para separar la imagen del contenido */
+    cursor: pointer;
+    /* Cambia el cursor a pointer cuando pasa sobre la imagen */
+}
+
+.custom-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra gris */
+}
+
+.custom-card-title {
+    color: #C60909;
+    /* Color rojo */
+    font-weight: bold;
+}
+
+.custom-card-link {
+    color: #C60909;
+    /* Color rojo */
+    font-weight: bold;
+    text-decoration: none;
+    /* Quitar subrayado */
+}
+
+.custom-card-link:hover {
+    text-decoration: underline;
+}
+
+.banner {
+    background-image: url('../img/3.jpg');
+    background-size: cover;
+    /* Asegura que la imagen de fondo cubra todo el banner */
+    background-position: center;
+    min-height: 400px;
+    /* Altura del banner */
+    position: relative;
+}
+
+
+/******* AVANCES *******/
+/* Estilo para ajustar el margen inferior entre campos */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Estilo de los inputs personalizados */
+.custom-form-control {
+    border: 1px solid #C60909;
+    /*Borderojo*/border-radius: 1px;
+    padding: 8px;
+    width: 100%;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+}
+
+/* Alinear el textarea proporcionalmente al tamaño de los inputs */
+textarea.custom-form-control {
+    width: 100%;
+    resize: none; /* Evitar que el textarea sea redimensionable */
+}
+
+/* Estilo del botón de envío */
+.btn-block {
+    background-color: #C60909;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Estilo del label */
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Reducir padding lateral entre las columnas del grid */
+.row .col-md-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/************* ODS CARDS VERTICAL *********/
+.ods-new-card {
+    transition: transform 0.3s, filter 0.3s;
+    text-align: center;
+    color: white;
+    height: 270px; /* Ajusta la altura al tamaño de la imagen */
+    width: 270px; /* Añade un ancho fijo para que sea un cuadrado */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    border-radius: 8px;
+    margin: 0 auto 1.5rem; /* Centra la carta y añade margen inferior */
+}
+
+.ods-new-card:hover {
+    transform: scale(1.05);
+    filter: brightness(85%);
+}
+
+.ods-new-card a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.ods-new-salud {
+    background-image: url('../img/SALUD_BIENESTAR.jpg');
+}
+
+.ods-new-hambre {
+    background-image: url('../img/hambre_cero.png');
+}
+
+.ods-new-pobreza {
+    background-image: url('../img/fin_de_pobreza.jpg');
+}
+
+.ods-new-educacion {
+    background-image: url('../img/educacion_calidad.png');
+    margin-bottom: 2rem; /* Añade un margen extra a la última carta */
+}
+p {
+    margin-bottom: 10px; /* Ajusta según el espacio que prefieras */
+}
+
+.small-space {
+    margin-bottom: 15px; /* Ajusta el valor según el espacio que desees */
+    text-align: justify;
+  }

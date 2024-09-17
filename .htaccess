@@ -1,0 +1,18 @@
+# Deshabilita la navegación por directorios
+Options -Indexes
+
+# Habilita el motor de reescritura de URLs
+RewriteEngine On
+
+# Condiciones para continuar con la reescritura si no se cumple una de las siguientes:
+# La URL solicitada no es un directorio
+RewriteCond %{REQUEST_FILENAME} !-d
+# La URL solicitada no es un archivo
+RewriteCond %{REQUEST_FILENAME} !-f
+# La URL solicitada no es un enlace simbólico
+RewriteCond %{REQUEST_FILENAME} !-l
+
+# Cualquier otra URL se reescribirá hacia index.php pasando la URL original como parámetro 'url'
+# [QSA] asegura que los parámetros de la query original se conserven
+# [L] indica que esta será la última regla de reescritura si coincide
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
