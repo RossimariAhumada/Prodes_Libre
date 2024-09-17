@@ -1,6 +1,6 @@
 <?php
 // Define la URL base del proyecto
-define('BASE_URL', 'http://192.168.137.5/Prodes_Libre/');
+define('BASE_URL', 'http://192.168.137.1/Prodes_Libre/');
 // define('BASE_URL', 'http://192.168.137.81/Prodes_Libre/'); // URL alternativa comentada, útil para pruebas o cambios de servidor
 
 // Define la ruta pública del proyecto, que contiene los recursos accesibles desde el navegador
