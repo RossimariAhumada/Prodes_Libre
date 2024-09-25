@@ -14,8 +14,12 @@
             </button>
             <!-- Iconos de carrito y usuario -->
             <div class="d-flex align-items-center m-2" id="icon-container">
-                <img src="<?php echo PUBLIC_PATH; ?>img/bolsa.png" alt="Carrito" class="me-3" style="width: 30px;">
-                <img src="<?php echo PUBLIC_PATH; ?>img/usuario.png" alt="Login" style="width: 30px;">
+                <a href="#">
+                    <img src="<?php echo PUBLIC_PATH; ?>img/bolsa.png" alt="Carrito" class="me-3" style="width: 30px;">
+                </a>
+                <a href="<?php echo BASE_URL . 'login_page'; ?>">
+                    <img src="<?php echo PUBLIC_PATH; ?>img/usuario.png" alt="Login" style="width: 30px;">
+                </a>
             </div>
         </form>
 </nav>
@@ -70,3 +74,5 @@
         </div>
     </div>
 </nav>
+
+    

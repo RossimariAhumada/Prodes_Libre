@@ -575,3 +575,387 @@ p {
     margin-bottom: 15px; /* Ajusta el valor según el espacio que desees */
     text-align: justify;
   }
+
+
+  /************ LOGIN ***********************/
+  
+  /* Estilos generales */
+.body-login {
+    margin: 0;
+    font-family: Arial, sans-serif;
+   /* background-color: #f2f4f6;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Centrado del contenedor */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Se asegura que ocupe toda la altura de la pantalla */
+}
+
+/* Caja del login más grande con borde más grueso */
+.login-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 40px; /* Redondea las esquinas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    border: 6px solid transparent; /* Añade un borde transparente */
+    border-radius: 40px; /* Asegúrate de que coincide con el border-radius del elemento */
+    /*border-image: linear-gradient(to top, white, rgb(226, 5, 5)) 1; /* Aplica el degradado */
+}
+
+/* Estilo del logo */
+.logo {
+    max-width: 180px; /* Aumentar el tamaño máximo del logo */
+    margin-bottom: 20px;
+}
+
+/* Título del login */
+.login-title {
+    font-size: 16px; /* Aumentar un poco el tamaño de la fuente */
+    margin-bottom: 25px; /* Más espacio debajo del título */
+    color: #615f5f;
+}
+
+/* Formulario */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Etiquetas del formulario */
+.login-label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Inputs más grandes */
+.login-input {
+    padding: 15px; /* Aumentar el padding interno de los inputs */
+    margin-bottom: 20px; /* Más espacio entre inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none; /* Eliminar el borde de foco predeterminado */
+    transition: border-color 0.3s ease; /* Transición suave en cambios de borde */
+}
+
+.login-input:focus {
+    border-color: #C60909; /* Cambiar borde a rojo al hacer foco */
+    box-shadow: none; /* Asegurarse de que no haya sombra al hacer foco */
+}
+
+.login-input::placeholder {
+    color: #bdbaba; /* Color de los placeholders para que resalten un poco menos */
+}
+
+
+/* Enlace de contraseña olvidada */
+.forgot-password-link {
+    color: #C60909;
+    text-decoration: none;
+    font-size: 12px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* Botón de inicio de sesión */
+.login-button {
+    padding: 15px; /* Aumentar el tamaño del botón */
+    background-color: #C60909;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-button:hover {
+    background-color:#C60909;
+}
+
+/* Texto de registro */
+.register-text {
+    font-size: 12px;
+}
+
+/* Enlace de registro */
+.register-link {
+    color: #C60909;
+    text-decoration: none;
+}
+
+
+/******* REGISTRO USUARIO ******/
+
+.body-registro {
+    font-family: 'Arial', sans-serif;
+    /*background-color: #f5f5f5;*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registro-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 40px; /* Redondea las esquinas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-header img {
+    max-width: 180px;
+    margin-bottom: 15px; /* Aumenta el espacio debajo del título */
+}
+
+.registration-form .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.registration-form .form-group {
+    flex: 1;
+}
+
+.registration-form label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.registration-form input, 
+.registration-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none; /* Eliminar el borde de foco predeterminado */
+    transition: border-color 0.3s ease; /* Transición suave en cambios de borde */
+}
+
+
+.registration-form input:focus {
+    border-color: #C60909; /* Cambiar borde a rojo al hacer foco */
+    box-shadow: none; /* Asegurarse de que no haya sombra al hacer foco */
+}
+
+.registration-form input::placeholder {
+    color: #bdbaba; /* Color de los placeholders para que resalten un poco menos */
+}
+
+.form-row select:focus {
+    border-color: #C60909;
+}
+
+
+.registration-form select {
+    appearance: none;
+}
+
+.registration-form .btn {
+    background-color: #C60909;;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.registration-form .btn:hover {
+    background-color: #C60909;;
+}
+
+.login-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.login-text a {
+    color: #C60909;;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+/**** SOLAPAR MENSAJE****/
+#solapar {
+    position:fixed;
+    z-index:2000;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+/*******  POPUP MENSAJE  *******/
+#popupmensaje {    
+    position: absolute;
+    top: 35%;
+    left:37.5%;
+    width: 25%;
+    height:auto;
+    z-index:2002;
+    background: #ffffff; /* Old browsers */
+
+    border:none;
+    position:fixed;
+
+}
+#popupmensaje .popupbarratitlo{
+    width:100%;
+    height:30px;
+    clear:both;
+    padding:8px 0px 0px 0px;
+    background-color:#b70000
+}
+#popupmensaje .cuerpopopup{
+    width:90%;
+    height:auto;
+    clear:both;
+    padding:5%;
+}
+
+#popupmensaje h2{
+    font-family:'PT_Sans-Web-Bold', Arial, Helvetica, sans-serif;
+    font-size:1.2em;		
+    color:#fff;
+    letter-spacing: 0.5px;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -font-smoothing: antialiased;
+    text-align:center;
+    vertical-align:middle;
+}
+#popupmensaje h3{
+    font-family:'PT_Sans-Web-Bold', Arial, Helvetica, sans-serif;
+    font-size:1em;		
+    color:#fff;
+    margin:0px 0px 10px 0px;
+    letter-spacing: 0.5px;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -font-smoothing: antialiased;
+    text-align:justify;
+}
+#popupmensaje img{
+    display:block;
+    margin:0px auto;
+    width:50px;
+    height:50px;
+}
+#popupmensaje p{
+    font-family:'PT_Sans-Web-Regular', Arial, Helvetica, sans-serif;
+    font-size:.8em;		
+    color:#585858;
+    margin:0px 0px 5px 0px;
+    letter-spacing: 0.5px;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -font-smoothing: antialiased;
+    text-align:center;
+}
+#popupmensaje p a{		
+    color:#585858;	
+    text-decoration:none;
+}
+#popupmensaje #btpopup{
+    display:block;
+    margin:20px auto 10px auto;
+    color:#FFF;
+    font-family:'PT_Sans-Web-Regular', Arial, Helvetica, sans-serif;
+    font-size:.8em;
+    text-align:center;
+    font-weight:normal;
+    text-decoration:none;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -font-smoothing: antialiased;
+    background-color:#b70000;
+    padding:5px 10px;
+    border:none;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -o-border-radius:3px;
+    -ms-border-radius:3px;
+}
+#popupmensaje #centaropcion{
+    display: block;
+    width:98%;
+    min-height: 10px;
+    margin: 20px auto;
+}
+#popupmensaje .opcion{
+
+    display:block;
+    margin:20px auto;
+    color:#FFF;
+    width:40%;
+    min-height: 10px;
+    font-family:'PT_Sans-Web-Regular', Arial, Helvetica, sans-serif;
+    font-size:.8em;
+    text-align:center;
+    font-weight:normal;
+    text-decoration:none;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -font-smoothing: antialiased;
+    background-color:#b70000;
+    padding:5px 0px;
+    border:none;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -o-border-radius:3px;
+    -ms-border-radius:3px;
+}
+#popupmensaje .opcion:active{
+    background-color: #b70000;
+}
+
+#popupmensaje #btcerrar{
+    height:30px;
+    width:30px;
+    z-index:100;
+    position:absolute;
+    right:10px;
+    top:4px;
+    background:url(../img/cerrar.png) 0px 0px no-repeat;
+    color:#b70000;
+    text-indent:-100000px;
+    text-decoration:none;
+}
+#popupmensaje #btcerrar:active{
+    background:url(../img/cerrar.png) 0px -30px no-repeat;
+}

@@ -238,3 +238,57 @@
             font-size: 1rem;
         }
     }
+
+    /***** LOGIN *****/
+    @media (max-width: 600px) {
+        .login-box {
+            max-width: 90%;
+            padding: 15px;
+        }
+    
+        .logo {
+            max-width: 120px;
+        }
+    
+        .login-title {
+            font-size: 16px;
+        }
+    }
+
+
+    /****** REGISTRO DE USUARIO ******/
+    /* Responsividad */
+@media (max-width: 768px) {
+    .registro-container {
+        padding: 15px;
+    }
+
+    .registration-form .form-row {
+        flex-direction: column;
+    }
+
+    .registration-form .btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .registro-container {
+        padding: 10px;
+    }
+
+    .form-header img {
+        max-width: 80px;
+    }
+
+    .registration-form input, 
+    .registration-form select {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .registration-form .btn {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
