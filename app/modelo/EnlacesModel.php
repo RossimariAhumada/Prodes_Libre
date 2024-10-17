@@ -32,9 +32,9 @@ class EnlacesModel
 
         // Verifica si la ruta construida no es legible (archivo no encontrado)
         if (!is_readable($cargar)) {
-            $cargar = VISTA_PATH . 'modulo' . DS . 'inicio.php'; // Si el archivo no existe, redirige a 'inicio.php'
-            $ruta = '<p>inicio</p>'; // Establece la ruta como 'inicio'
-            header('Location:' . BASE_URL . 'inicio'); // Redirige al usuario a la página de inicio
+            $cargar = VISTA_PATH . 'modulo' . DS . 'ingreso_inicio.php'; // Si el archivo no existe, redirige a 'inicio.php'
+            $ruta = '<p>ingreso_inicio</p>'; // Establece la ruta como 'inicio'
+            header('Location:' . BASE_URL . 'ingreso_inicio'); // Redirige al usuario a la página de inicio
         }
 
         // Devuelve un array con la página a cargar y la ruta que se mostrará al usuario

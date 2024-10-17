@@ -14,3 +14,10 @@ document.querySelectorAll('.nav-hover').forEach(link => {
         this.classList.remove('hovered');
     });
 });
+
+
+/*******OCULTAR NAV MENU INGRESO******** */
+function toggleProfile() {
+    var profileMenu = document.getElementById("profileMenu");
+    profileMenu.classList.toggle("show");
+}

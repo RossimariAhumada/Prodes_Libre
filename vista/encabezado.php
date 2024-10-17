@@ -66,6 +66,11 @@
                         href="#">BANCOS</a>
                 </li>
                 <li class="nav-item">
+                    <!-- Verifica si la página actual es 'bancos' y añade la clase 'active' si es así -->
+                    <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'tienda') ? 'active' : ''; ?>"
+                        href="#">TIENDA</a>
+                </li>
+                <li class="nav-item">
                     <!-- Verifica si la página actual es 'contacto' y añade la clase 'active' si es así -->
                     <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'contacto') ? 'active' : ''; ?>"
                         href="<?php echo BASE_URL . 'Category' . DS . 'contacto'; ?>">CONTACTO</a>
@@ -74,5 +79,3 @@
         </div>
     </div>
 </nav>
-
-    

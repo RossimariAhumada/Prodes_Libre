@@ -800,7 +800,7 @@ p {
 }
 
 .login-text a {
-    color: #C60909;;
+    color: #C60909;
     text-decoration: none;
 }
 
@@ -958,4 +958,243 @@ p {
 }
 #popupmensaje #btcerrar:active{
     background:url(../img/cerrar.png) 0px -30px no-repeat;
+}
+
+/*****************MENU DE INGRESO DE SESSION**************/
+/* Estilos generales */
+.body_ingreso_menu {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.navbar {
+    background-color: #f4f4f4; /* Color de fondo del navbar */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.navbar-logo a {
+    color: #C60909; /* Cambiado a color #C60909 */
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.navbar-menu a {
+    color: #C60909; /* Cambiado a color #C60909 */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.navbar-menu a:hover {
+    background-color: #ffffff; /* Color de fondo más oscuro en hover */
+    border-radius: 5px;
+}
+
+/* Dropdown */
+.dropdown .dropbtn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #C60909; /* Cambiado a color #C60909 */
+    font-size: 16px;
+    padding: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content a {
+    color: #C60909; /* Cambiado a color #C60909 */
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd; /* Color de fondo en hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Perfil de usuario */
+.navbar-profile img {
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.navbar-profile span {
+    color: #C60909; /* Cambiado a color #C60909 */
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.profile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.profile-menu li {
+    padding: 10px 20px;
+}
+
+.profile-menu li a {
+    color: #C60909; /* Cambiado a color #C60909 */
+    text-decoration: none;
+}
+
+.profile-menu li a:hover {
+    background-color: #ddd; /* Color de fondo en hover */
+}
+
+.show {
+    display: block;
+}
+
+/******** CSS AGREGAR PRODUCTO ******/
+/* Estilo general del contenedor */
+.product-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+/* Estilos del formulario */
+.product-form .form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.product-form .form-group {
+    flex: 1;
+}
+
+.product-form label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.product-form input, 
+.product-form select, 
+.product-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo del botón de subida de archivos */
+.custom-file-container {
+    display: flex;
+    align-items: center;
+}
+
+input[type="file"] {
+    display: none; /* Oculta el input real */
+}
+
+.custom-file-upload {
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 2px solid #C60909;
+    background-color: #C60909;
+    color: white !important; /* Texto blanco asegurado */
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estilo para los inputs cuando están en foco */
+.product-form input:focus, 
+.product-form select:focus, 
+.product-form textarea:focus {
+    border-color: #C60909;
+    box-shadow: 0 0 1px rgba(198, 9, 9, 0.5); /* Efecto de resplandor suave */
+}
+
+
+.custom-file-upload:hover {
+    background-color: #B40808;
+    border-color: #B40808;
+}
+
+.file-upload-info {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Estilo del botón de enviar */
+.product-form .btn {
+    background-color: #C60909;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.product-form .btn:hover {
+    background-color: #B40808;
 }

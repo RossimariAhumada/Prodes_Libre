@@ -1,6 +1,4 @@
 
-
-
 /*************VALIDADOR DE CONTRASEÑA Y CORREO*****************/
 document.getElementById('formu').addEventListener('submit', function (event) {
     let email = document.getElementById('email').value;
@@ -53,3 +51,4 @@ function mostrarAlerta(mensaje, tipo) {
         setTimeout(() => alertDiv.remove(), 500);  // Remover el elemento del DOM
     }, 7000);
 }
+
