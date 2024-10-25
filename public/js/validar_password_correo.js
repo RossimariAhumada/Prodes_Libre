@@ -52,3 +52,9 @@ function mostrarAlerta(mensaje, tipo) {
     }, 7000);
 }
 
+   // Abrir el calendario al hacer clic en cualquier parte del input[type="date"]
+   document.querySelectorAll('input[type="date"]').forEach(function(input) {
+    input.addEventListener('click', function() {
+        this.showPicker(); // Método que abre el calendario
+    });
+});

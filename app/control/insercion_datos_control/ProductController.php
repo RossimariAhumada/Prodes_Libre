@@ -48,7 +48,7 @@ class guardar_producto_control {
 
             // Evaluar si tuvo éxito la inserción en la BD
             if ($guardar['rsl'] === TRUE) {
-                $carp_destino = VISTA_PATH . 'imgapp' . DS . 'products' . DS;
+                $carp_destino = VISTA_PATH . 'documentos' . DS . 'products' . DS;
                 $ruta_img = $carp_destino . $nombre_img_subir;
 
                 // Verificar si se subió la imagen y moverla a su destino

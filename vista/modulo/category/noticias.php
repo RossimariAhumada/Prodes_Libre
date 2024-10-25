@@ -13,8 +13,7 @@ include_once VISTA_PATH . 'encabezado.php';
             <div class="custom-col">
                 <div class="custom-card">
                     <a href="pagina-destino.html" class="custom-card-link">
-                        <img src="<?php echo PUBLIC_PATH; ?>img/noticias.png" class="card-img-top"
-                            alt="Actividad">
+                        <img src="<?php echo PUBLIC_PATH; ?>img/N1.jfif" class="card-img-top" alt="Actividad">
                     </a>
                     <div class="custom-card-body">
                         <h5 class="custom-card-title">Noticia</h5>
@@ -27,7 +26,7 @@ include_once VISTA_PATH . 'encabezado.php';
             <div class="custom-col">
                 <div class="custom-card">
                     <a href="pagina-destino.html" class="custom-card-link">
-                        <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Actividad">
+                        <img src="<?php echo PUBLIC_PATH; ?>img/4.jpg" class="card-img-top" alt="Actividad">
                     </a>
                     <div class="custom-card-body">
                         <h5 class="custom-card-title">Noticia 2</h5>
@@ -40,7 +39,7 @@ include_once VISTA_PATH . 'encabezado.php';
             <div class="custom-col">
                 <div class="custom-card">
                     <a href="pagina-destino.html" class="custom-card-link">
-                        <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Actividad">
+                        <img src="<?php echo PUBLIC_PATH; ?>img/N3.jfif" class="card-img-top" alt="Actividad">
                     </a>
                     <div class="custom-card-body">
                         <h5 class="custom-card-title">Noticia 3</h5>
@@ -53,7 +52,7 @@ include_once VISTA_PATH . 'encabezado.php';
             <div class="custom-col">
                 <div class="custom-card">
                     <a href="pagina-destino.html" class="custom-card-link">
-                        <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Actividad">
+                        <img src="<?php echo PUBLIC_PATH; ?>img/N4.jpg" class="card-img-top" alt="Actividad">
                     </a>
                     <div class="custom-card-body">
                         <h5 class="custom-card-title">Noticia 4</h5>

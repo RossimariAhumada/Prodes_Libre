@@ -11,7 +11,7 @@ include_once VISTA_PATH . 'encabezado.php';
     <div class="row">
         <!-- Columna de la imagen -->
         <div class="col-md-4">
-            <img src="<?php echo PUBLIC_PATH; ?>img/avance.png" alt="Avances" class="img-fluid">
+            <img src="<?php echo PUBLIC_PATH; ?>img/Avances.png" alt="Avances" class="img-fluid">
         </div>
         <!-- Columna del texto -->
         <div class="col-md-8">

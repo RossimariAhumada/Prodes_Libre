@@ -7,10 +7,10 @@ $intContact->guardar_producto();
 ?>
 
 <body class="body-product">
+    <header class="bg-danger text-white text-center py-1">
+        <h3 class="header-title">Productos</h3>
+    </header>
     <div class="product-container">
-        <div class="form-header">
-            <h2 class="form-title">Registro de Producto</h2>
-        </div>
         <!-- Contenedor para las alertas -->
         <div id="alert-container"></div>
 
@@ -41,7 +41,8 @@ $intContact->guardar_producto();
                 <div class="form-group">
                     <label for="product-image">Foto del Producto</label>
                     <div class="custom-file-container">
-                        <input type="file" id="product-image" name="product-image" accept=".jpg, .jpeg, .png" required>
+                        <input type="file" id="product-image" name="product-image" accept=".jfif,.jpg, .jpeg, .png"
+                            required>
                         <label for="product-image" class="custom-file-upload">Seleccionar archivo</label>
                         <span id="file-name" class="file-upload-info">Ningún archivo seleccionado</span>
                     </div>
@@ -66,7 +67,7 @@ $intContact->guardar_producto();
             <input type="submit" id="submit-product" class="btn" value="Registrar Producto">
         </form>
     </div>
-
+    <?php include_once VISTA_PATH . 'pie.php';?>
     <script>
     // Obtener elementos
     const fileInput = document.getElementById('product-image');
@@ -81,8 +82,8 @@ $intContact->guardar_producto();
         // Mostrar el nombre del archivo
         fileNameDisplay.textContent = fileName;
 
-        // Validar extensión del archivo (solo .jpg, .jpeg, .png)
-        const validExtensions = ['jpg', 'jpeg', 'png'];
+        // Validar extensión del archivo (solo .pdf
+        const validExtensions = ['jpg', 'jpeg', 'png', 'jfif'];
         const fileExtension = fileName.split('.').pop().toLowerCase();
 
         if (file && !validExtensions.includes(fileExtension)) {

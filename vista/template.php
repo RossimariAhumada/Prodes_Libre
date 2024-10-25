@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="<?php echo PUBLIC_PATH; ?>css/styles.css" />
     <link rel="stylesheet" href="<?php echo PUBLIC_PATH; ?>css/main.css" />
     <link rel="stylesheet" href="<?php echo PUBLIC_PATH; ?>css/responsy.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>

@@ -13,7 +13,7 @@ include_once VISTA_PATH . 'encabezado.php';
             <div class="custom-col">
                 <div class="custom-card">
                     <a href="pagina-destino.html" class="custom-card-link">
-                        <img src="<?php echo PUBLIC_PATH; ?>img/Actividad_extraescolar.jpg" class="card-img-top"
+                        <img src="<?php echo PUBLIC_PATH; ?>img/Actividad 1.jpg" class="card-img-top"
                             alt="Actividad">
                     </a>
                     <div class="custom-card-body">
@@ -27,7 +27,7 @@ include_once VISTA_PATH . 'encabezado.php';
             <div class="custom-col">
                 <div class="custom-card">
                     <a href="pagina-destino.html" class="custom-card-link">
-                        <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Actividad">
+                        <img src="<?php echo PUBLIC_PATH; ?>img/Acti 2.jfif" class="card-img-top" alt="Actividad">
                     </a>
                     <div class="custom-card-body">
                         <h5 class="custom-card-title">ACTIVIDAD 2</h5>
@@ -40,7 +40,7 @@ include_once VISTA_PATH . 'encabezado.php';
             <div class="custom-col">
                 <div class="custom-card">
                     <a href="pagina-destino.html" class="custom-card-link">
-                        <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Actividad">
+                        <img src="<?php echo PUBLIC_PATH; ?>img/Acitvidad 3.jfif" class="card-img-top" alt="Actividad">
                     </a>
                     <div class="custom-card-body">
                         <h5 class="custom-card-title">ACTIVIDAD 3</h5>
@@ -53,7 +53,7 @@ include_once VISTA_PATH . 'encabezado.php';
             <div class="custom-col">
                 <div class="custom-card">
                     <a href="pagina-destino.html" class="custom-card-link">
-                        <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Actividad">
+                        <img src="<?php echo PUBLIC_PATH; ?>img/Ac 4.jfif" class="card-img-top" alt="Actividad">
                     </a>
                     <div class="custom-card-body">
                         <h5 class="custom-card-title">ACTIVIDAD 4</h5>

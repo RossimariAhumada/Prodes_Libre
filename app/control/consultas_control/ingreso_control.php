@@ -86,6 +86,4 @@ class IngresoControl {
     public function __clone() {
         trigger_error('La clonación de este objeto no está permitida', E_USER_ERROR);
     }
-
-    
 }

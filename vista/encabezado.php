@@ -62,13 +62,8 @@
                 </li>
                 <li class="nav-item">
                     <!-- Verifica si la página actual es 'bancos' y añade la clase 'active' si es así -->
-                    <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'bancos') ? 'active' : ''; ?>"
-                        href="#">BANCOS</a>
-                </li>
-                <li class="nav-item">
-                    <!-- Verifica si la página actual es 'bancos' y añade la clase 'active' si es así -->
                     <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'tienda') ? 'active' : ''; ?>"
-                        href="#">TIENDA</a>
+                        href="<?php echo BASE_URL . 'tienda' . DS . 'producto'; ?>">TIENDA</a>
                 </li>
                 <li class="nav-item">
                     <!-- Verifica si la página actual es 'contacto' y añade la clase 'active' si es así -->
