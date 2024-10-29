@@ -38,5 +38,11 @@ class BancoProyectoController {
     public function obtenerProyectosPaginados($inicio, $limite) {
         return BancoProyecto::proyectosPaginados($inicio, $limite);
     }
+
+// Método para actualizar el estado de un proyecto
+public function actualizarEstadoProyecto($id_proyecto, $nuevo_estado) {
+    return BancoProyecto::actualizarEstado($id_proyecto, $nuevo_estado);
+}
+
 }
 ?>

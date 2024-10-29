@@ -8,7 +8,7 @@ $intContact->guardar_producto();
 
 <body class="body-product">
     <header class="bg-danger text-white text-center py-1">
-        <h3 class="header-title">Productos</h3>
+        <h3 class="header-title">Actividad</h3>
     </header>
     <div class="product-container">
         <!-- Contenedor para las alertas -->
@@ -17,10 +17,11 @@ $intContact->guardar_producto();
         <form id="product-form" class="product-form" action="" method="POST" enctype="multipart/form-data">
             <div class="form-row">
                 <div class="form-group">
-                    <label for="product-name">Nombre del Producto</label>
+                    <label for="product-name">Nombre de la Actividad</label>
                     <input type="text" id="product-name" name="product-name"
-                        placeholder="Ingresa el nombre del producto" required>
+                        placeholder="Ingresa el nombre de la actividad" required>
                 </div>
+
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="fechaInicio" class="form-label-custom">Fecha de Inicio</label>
@@ -31,30 +32,27 @@ $intContact->guardar_producto();
                         <input type="date" class="form-control-custom" id="fechaFin" name="fechaFin" required>
                     </div>
                 </div>
+
                 <div class="form-group">
-                    <label for="product-value">Valor del Producto</label>
-                    <input type="number" id="product-value" name="product-value" placeholder="Ingresa el valor"
-                        required>
+                    <label for="product-value">Participantes</label>
+                    <input type="number" id="product-value" name="product-value"
+                        placeholder="Ingrese la cantidad de participantes" required>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="product-description">Descripción del Producto</label>
+                    <label for="product-description">Descripción de la Activiad</label>
                     <textarea id="product-description" name="product-description" maxlength="100"
-                        placeholder="Ingresa una descripción del producto" required></textarea>
+                        placeholder="Ingresa una descripción de la actividad" required></textarea>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="product-image">Foto del Producto</label>
-                    <div class="custom-file-container">
-                        <input type="file" id="product-image" name="product-image" accept=".jfif,.jpg, .jpeg, .png"
-                            required>
-                        <label for="product-image" class="custom-file-upload">Seleccionar archivo</label>
-                        <span id="file-name" class="file-upload-info">Ningún archivo seleccionado</span>
-                    </div>
+                    <label for="product-description">Detalle de la Activiad</label>
+                    <textarea id="product-description" name="product-description" maxlength="100"
+                        placeholder="Ingresar detalle de la actividad" required></textarea>
                 </div>
             </div>
 
@@ -73,7 +71,19 @@ $intContact->guardar_producto();
                     </select>
                 </div>
             </div>
-            <input type="submit" id="submit-product" class="btn" value="Registrar Producto">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="product-image">Foto de la Actividad</label>
+                    <div class="custom-file-container">
+                        <input type="file" id="product-image" name="product-image" accept=".jfif,.jpg, .jpeg, .png"
+                            required>
+                        <label for="product-image" class="custom-file-upload">Seleccionar archivo</label>
+                        <span id="file-name" class="file-upload-info">Ningún archivo seleccionado</span>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" id="submit-product" class="btn" value="Registrar Actividad">
         </form>
     </div>
     <?php include_once VISTA_PATH . 'pie.php';?>

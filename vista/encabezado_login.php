@@ -18,19 +18,21 @@ $usuario = $menuControl->mostrarMenuUsuario();
 
             <!-- Enlaces de navegación -->
             <div class="collapse navbar-collapse justify-content-center mx-5" id="navbarNav">
+<!--------------------------------------------------------------------MENU ADMINISTRADOR------------------------------------------------------------->
                 <?php if ($usuario['id_rol'] == 1): // Administrador ?>
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'banco_proyecto_gestion' || $_SERVER['REQUEST_URI'] == '/Prodes_Libre/') ? 'active' : ''; ?>"
-                            href="<?php echo BASE_URL . 'gestion' . DS . 'banco_proyecto_gestion'; ?>">BANCO PROYECTO</a>
+                            href="<?php echo BASE_URL . 'gestion' . DS . 'banco_proyecto_gestion'; ?>">BANCO
+                            PROYECTO</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'agregar_producto') ? 'active' : ''; ?>"
                             href="<?php echo BASE_URL . 'gestion' . DS . 'agregar_producto'; ?>">PRODUCTOS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'actividades') ? 'active' : ''; ?>"
-                            href="<?php echo BASE_URL . 'Category' . DS . 'actividades'; ?>">ACTIVIDADES</a>
+                        <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'agregar_actividad') ? 'active' : ''; ?>"
+                            href="<?php echo BASE_URL . 'gestion' . DS . 'agregar_actividad'; ?>">ACTIVIDADES</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'avances') ? 'active' : ''; ?>"
@@ -42,7 +44,7 @@ $usuario = $menuControl->mostrarMenuUsuario();
                     </li>
                 </ul>
                 <?php endif; ?>
-
+<!--------------------------------------------------------------------MENU VISITANTE------------------------------------------------------------->
                 <?php if ($usuario['id_rol'] == 2): // Visitante ?>
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -50,20 +52,16 @@ $usuario = $menuControl->mostrarMenuUsuario();
                             href="<?php echo BASE_URL . 'gestion' . DS . 'banco_proyecto'; ?>">BANCO PROYECTO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'agregar_producto') ? 'active' : ''; ?>"
-                            href="<?php echo BASE_URL . 'gestion' . DS . 'agregar_producto'; ?>">PRODUCTOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'actividades') ? 'active' : ''; ?>"
-                            href="<?php echo BASE_URL . 'Category' . DS . 'actividades'; ?>">ACTIVIDADES</a>
+                        <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'producto_login') ? 'active' : ''; ?>"
+                            href="<?php echo BASE_URL . 'tienda' . DS . 'producto_login'; ?>">TIENDA</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'avances') ? 'active' : ''; ?>"
-                            href="<?php echo BASE_URL . 'Category' . DS . 'avances'; ?>">AVANCES</a>
+                            href="#">AVANCES</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'noticias') ? 'active' : ''; ?>"
-                            href="<?php echo BASE_URL . 'Category' . DS . 'noticias'; ?>">NOTICIAS</a>
+                            href="#">NOTICIAS</a>
                     </li>
                 </ul>
                 <?php endif; ?>

@@ -97,5 +97,26 @@ class BancoProyecto extends CnxClass {
         $cnx = null;
     }
 
+    public static function actualizarEstado($id_proyecto, $nuevo_estado) {
+        $cnx = CnxClass::singleton_conexion();
+        $cmdsql = 'UPDATE banco_proyecto SET id_estado = :nuevo_estado WHERE id_proyecto = :id_proyecto';
+        try {
+            $preparado = $cnx->preparar($cmdsql);
+            $preparado->bindValue(':nuevo_estado', $nuevo_estado, PDO::PARAM_INT);
+            $preparado->bindValue(':id_proyecto', $id_proyecto, PDO::PARAM_INT);
+            if ($preparado->execute()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            print "Error!: " . $e->getMessage();
+            return false;
+        }
+        $cnx->closed();
+        $cnx = null;
+    }
+    
+    
 }
 ?>

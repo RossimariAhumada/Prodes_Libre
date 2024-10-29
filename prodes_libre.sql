@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-10-2024 a las 03:05:06
--- Versión del servidor: 10.4.16-MariaDB
--- Versión de PHP: 7.4.12
+-- Tiempo de generación: 29-10-2024 a las 17:13:06
+-- Versión del servidor: 10.4.10-MariaDB
+-- Versión de PHP: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -20,6 +21,36 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `prodes_libre`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `actividad`
+--
+
+CREATE TABLE `actividad` (
+  `id_actividad` int(11) NOT NULL,
+  `nombre_actividad` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `descripcion_actividad` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `fecha_inicio` date NOT NULL,
+  `fecha_final` date NOT NULL,
+  `detalle_actividad` varchar(1000) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `foto` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `participantes` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `asignacion_actividad`
+--
+
+CREATE TABLE `asignacion_actividad` (
+  `id_asignacion` int(11) NOT NULL,
+  `id_actividad` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `participantes` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -49,6 +80,20 @@ CREATE TABLE `banco_proyecto` (
 INSERT INTO `banco_proyecto` (`id_proyecto`, `nombre_proyecto`, `descripcion_proyecto`, `documento_adjunto`, `fecha_inicio`, `fecha_final`, `presupuesto`, `resultados_esperados`, `ubicacion`, `id_ods`, `id_usuario`, `id_estado`) VALUES
 (2, 'Fin de la pobreza', 'si e puede dejar la pobreza', 'fin de la pobreza.pdf', '2024-10-20', '2024-10-30', '1000000.00', 'si se puede', 'Colombia', 1, 1, 2),
 (3, 'Voluntad de vida', 'Voluntad', 'voluntad de vida.pdf', '2024-10-20', '2025-10-20', '15000000.00', 'Buscar y asesorar para dar voluntad de vida', 'Colombia', 3, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `compras`
+--
+
+CREATE TABLE `compras` (
+  `id_pago` int(11) NOT NULL,
+  `id_prdcto` int(11) NOT NULL,
+  `id_ods` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `valor_prdcto` decimal(15,0) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -182,7 +227,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `identificacion`, `nombres`, `correo`, `password`, `telefono`, `direccion`, `id_identificacion`, `id_rol`) VALUES
-(1, '1143165992', 'mauricio alandete', 'mauricioalandete767@gmail.com', '$2a$10$84b2b1144f79445fb2152ud9r1sAH5hGWM6s7NDqpy2XohBD2vMDW', '3017046662', 'd', 1, 1),
+(1, '1143165992', 'mauricio alandete', 'mauricioalandete767@gmail.com', '$2a$10$84b2b1144f79445fb2152ud9r1sAH5hGWM6s7NDqpy2XohBD2vMDW', '3017046662', 'd', 1, 2),
 (2, '1143165992', 'mauricio alandete', 'mauricioalanDdete767@gmail.com', '$2a$10$0bbc147cd10eee9f187feu8DQDE5yYdbrjIlGdE8Zhy/0EFgJRInq', '3017046662', 'd', 1, 2),
 (3, '1143165992', 'mauricio alandete', 'mauricioalanddddete767@gmail.com', '$2a$10$5d9483a3f740c5ac74547eY.W0RrichKtSpunewofrHjsi6cdmlhu', '3017046662', 'd', 1, 2),
 (4, '1143165992', 'mauricio alandete', 'mauricioalandeddte767@gmail.com', '$2a$10$248bcc6a0d40e07be071buv8PEQcBxy2YAqu1HaTi5PFjbSH79VLO', '3017046662', 'd', 1, 2),
@@ -193,7 +238,7 @@ INSERT INTO `usuarios` (`id_usuario`, `identificacion`, `nombres`, `correo`, `pa
 (9, '1143165992', 'mauricio alandete', 'mau7@gmail.com', '$2a$10$41b45b9d7e6a2cf78e755e74BEgYMfzTn/nvaoGw8c0LOEZL5nqUO', '3017046662', 'd', 1, 2),
 (10, '1143165992', 'mauricio alandete', 'mauricioadd767@gmail.com', '$2a$10$9aaee2509172f4c597b54ukWYBCMkdgmb60K9jn8qchUYLDqUqP3a', '3017046662', 'd', 1, 2),
 (11, '1143165992', 'mauricio alandete', 'mauricio7@gmail.com', '$2a$10$2dad5c733b7f6d7c1f4b9uDuBgcp9cZ5w5WaycO5PSkKG71BunPX2', '3017046662', 'd', 1, 2),
-(12, '1232434465', 'rosssimari', 'rossimari@gmail.com', '$2a$10$ee1a698b12cef7803a30cez8b3SCy3/NykXNFrmBNZACZQZzmMf92', '11312313', 'dsadad', 1, 2),
+(12, '1232434465', 'rosssimari', 'rossimari@gmail.com', '$2a$10$ee1a698b12cef7803a30cez8b3SCy3/NykXNFrmBNZACZQZzmMf92', '11312313', 'dsadad', 1, 1),
 (13, '1143165992', 'mauricio alandete', 'rosi@gmail.com', '$2a$10$bdde85b97ed25f9fae856OXASMMicwLZustXD1pktMgCC2nAx2iJe', '3017046662', 'd', 1, 2),
 (14, '1143165992', 'mau', 'ro@gmail.com', '$2a$10$63f11bdae1fa3348749bcuebxG4zo26vQZPK1AcTog9h3KGyCuuQi', '3017046662', 'd', 1, 2),
 (15, '1143165992', 'mauricio alandete', 'mauri7@gmail.com', '$2a$10$9a701204bd8c1cbf69dcbOf6IQVyqyCMFun18EIIpmALshvRD.feK', '3017046662', 'd', 1, 2),
@@ -221,6 +266,20 @@ INSERT INTO `usuarios` (`id_usuario`, `identificacion`, `nombres`, `correo`, `pa
 --
 
 --
+-- Indices de la tabla `actividad`
+--
+ALTER TABLE `actividad`
+  ADD PRIMARY KEY (`id_actividad`);
+
+--
+-- Indices de la tabla `asignacion_actividad`
+--
+ALTER TABLE `asignacion_actividad`
+  ADD PRIMARY KEY (`id_asignacion`),
+  ADD KEY `id_actividad` (`id_actividad`),
+  ADD KEY `id_usuario` (`id_usuario`);
+
+--
 -- Indices de la tabla `banco_proyecto`
 --
 ALTER TABLE `banco_proyecto`
@@ -228,6 +287,15 @@ ALTER TABLE `banco_proyecto`
   ADD KEY `id_usuario` (`id_usuario`),
   ADD KEY `id_ods` (`id_ods`),
   ADD KEY `id_estado` (`id_estado`);
+
+--
+-- Indices de la tabla `compras`
+--
+ALTER TABLE `compras`
+  ADD PRIMARY KEY (`id_pago`),
+  ADD KEY `id_prdcto` (`id_prdcto`),
+  ADD KEY `id_ods` (`id_ods`),
+  ADD KEY `id_usuario` (`id_usuario`);
 
 --
 -- Indices de la tabla `entrada_ods`
@@ -273,10 +341,28 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `actividad`
+--
+ALTER TABLE `actividad`
+  MODIFY `id_actividad` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `asignacion_actividad`
+--
+ALTER TABLE `asignacion_actividad`
+  MODIFY `id_asignacion` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `banco_proyecto`
 --
 ALTER TABLE `banco_proyecto`
   MODIFY `id_proyecto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `compras`
+--
+ALTER TABLE `compras`
+  MODIFY `id_pago` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `entrada_ods`
@@ -319,12 +405,27 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- Filtros para la tabla `asignacion_actividad`
+--
+ALTER TABLE `asignacion_actividad`
+  ADD CONSTRAINT `asignacion_actividad_ibfk_1` FOREIGN KEY (`id_actividad`) REFERENCES `actividad` (`id_actividad`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `asignacion_actividad_ibfk_2` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Filtros para la tabla `banco_proyecto`
 --
 ALTER TABLE `banco_proyecto`
   ADD CONSTRAINT `banco_proyecto_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `banco_proyecto_ibfk_2` FOREIGN KEY (`id_ods`) REFERENCES `entrada_ods` (`id_ods`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `banco_proyecto_ibfk_3` FOREIGN KEY (`id_estado`) REFERENCES `estado_proyecto` (`id_estado`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `compras`
+--
+ALTER TABLE `compras`
+  ADD CONSTRAINT `compras_ibfk_1` FOREIGN KEY (`id_prdcto`) REFERENCES `productos` (`id_prdcto`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `compras_ibfk_2` FOREIGN KEY (`id_ods`) REFERENCES `entrada_ods` (`id_ods`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `compras_ibfk_3` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `productos`
