@@ -1,5 +1,5 @@
 <?php
-include_once VISTA_PATH . 'encabezado_login.php';
+include_once VISTA_PATH . 'encabezado.php';
 require_once CONTROL_PATH . 'consultas_control' . DS . 'producto_control.php';
 
 // Número máximo de productos por página

@@ -1,9 +1,9 @@
 <?php
 include_once VISTA_PATH . 'encabezado_login.php';
 require_once CONTROL_PATH . 'consultas_control' . DS . 'entrada_ods_control.php';
-require_once CONTROL_PATH . 'insercion_datos_control' . DS . 'ProductController.php';
-$intContact = guardar_producto_control::singleton_producto_control();
-$intContact->guardar_producto();
+require_once CONTROL_PATH . 'insercion_datos_control' . DS . 'Actividad_control.php';
+$intContact = guardar_actividad_control::singleton_actividad_control();
+$intContact->guardar_actividad();
 ?>
 
 <body class="body-product">
@@ -18,7 +18,7 @@ $intContact->guardar_producto();
             <div class="form-row">
                 <div class="form-group">
                     <label for="product-name">Nombre de la Actividad</label>
-                    <input type="text" id="product-name" name="product-name"
+                    <input type="text" id="actividad-name" name="actividad-name"
                         placeholder="Ingresa el nombre de la actividad" required>
                 </div>
 
@@ -35,7 +35,7 @@ $intContact->guardar_producto();
 
                 <div class="form-group">
                     <label for="product-value">Participantes</label>
-                    <input type="number" id="product-value" name="product-value"
+                    <input type="number" id="participante-value" name="participante-value"
                         placeholder="Ingrese la cantidad de participantes" required>
                 </div>
             </div>
@@ -43,7 +43,7 @@ $intContact->guardar_producto();
             <div class="form-row">
                 <div class="form-group">
                     <label for="product-description">Descripción de la Activiad</label>
-                    <textarea id="product-description" name="product-description" maxlength="100"
+                    <textarea id="actividad-description" name="actividad-description" maxlength="100"
                         placeholder="Ingresa una descripción de la actividad" required></textarea>
                 </div>
             </div>
@@ -51,7 +51,7 @@ $intContact->guardar_producto();
             <div class="form-row">
                 <div class="form-group">
                     <label for="product-description">Detalle de la Activiad</label>
-                    <textarea id="product-description" name="product-description" maxlength="100"
+                    <textarea id="actividad-description_detelle" name="actividad-description_detalle" maxlength="100"
                         placeholder="Ingresar detalle de la actividad" required></textarea>
                 </div>
             </div>
@@ -74,11 +74,11 @@ $intContact->guardar_producto();
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="product-image">Foto de la Actividad</label>
+                    <label for="actividad-image">Foto de la Actividad</label>
                     <div class="custom-file-container">
-                        <input type="file" id="product-image" name="product-image" accept=".jfif,.jpg, .jpeg, .png"
+                        <input type="file" id="actividad-image" name="actividad-image" accept=".jfif,.jpg,.jpeg,.png"
                             required>
-                        <label for="product-image" class="custom-file-upload">Seleccionar archivo</label>
+                        <label for="actividad-image" class="custom-file-upload">Seleccionar archivo</label>
                         <span id="file-name" class="file-upload-info">Ningún archivo seleccionado</span>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ $intContact->guardar_producto();
     <?php include_once VISTA_PATH . 'pie.php';?>
     <script>
     // Obtener elementos
-    const fileInput = document.getElementById('product-image');
+    const fileInput = document.getElementById('actividad-image');
     const fileNameDisplay = document.getElementById('file-name');
     const alertContainer = document.getElementById('alert-container');
 
@@ -114,6 +114,13 @@ $intContact->guardar_producto();
             // Limpiar alertas si el archivo es válido
             alertContainer.innerHTML = '';
         }
+    });
+
+    // Abrir el calendario al hacer clic en cualquier parte del input[type="date"]
+    document.querySelectorAll('input[type="date"]').forEach(function(input) {
+        input.addEventListener('click', function() {
+            this.showPicker(); // Método que abre el calendario
+        });
     });
     </script>
 </body>

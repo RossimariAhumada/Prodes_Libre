@@ -33,35 +33,35 @@
                     <!-- Línea nacional gratuita -->
                     <div class="d-flex align-items-center mb-3">
                         <i class="fas fa-phone-alt me-2"></i>
-                        <img src="<?php echo PUBLIC_PATH; ?>img/llamar.png"  class="contact-icon me-2">
+                        <!--<img src="<?php echo PUBLIC_PATH; ?>img/llamar.png"  class="contact-icon me-2">-->
                         <span>Línea nacional gratuita</span>
                     </div>
 
                     <!-- Número de teléfono -->
                     <div class="d-flex align-items-center mb-3">
                         <i class="fas fa-hashtag me-2"></i>
-                        <img src="<?php echo PUBLIC_PATH; ?>img/hashtag.png"  class="contact-icon me-2">
+                        <!--<img src="<?php echo PUBLIC_PATH; ?>img/hashtag.png"  class="contact-icon me-2">-->
                         <span>01 8000 180560</span>
                     </div>
 
                     <!-- Dirección sede -->
                     <div class="d-flex align-items-center mb-3">
                         <i class="fas fa-map-marker-alt me-2"></i>
-                        <img src="<?php echo PUBLIC_PATH; ?>img/mapa-1.png"  class="contact-icon me-2">
+                        <!--<img src="<?php echo PUBLIC_PATH; ?>img/mapa-1.png"  class="contact-icon me-2">-->
                         <span>Sede carrera 46 - 48 -170</span>
                     </div>
 
                     <!-- Correo electrónico -->
                     <div class="d-flex align-items-center mb-3">
                         <i class="fas fa-envelope me-2"></i>
-                        <img src="<?php echo PUBLIC_PATH; ?>img/email.png"  class="contact-icon me-2">
+                        <!--<img src="<?php echo PUBLIC_PATH; ?>img/email.png"  class="contact-icon me-2">-->
                         <span>prodeslibre.baq@unilibre.edu.co</span>
                     </div>
 
                     <!-- Ubicación -->
                     <div class="d-flex align-items-center">
                         <i class="fas fa-map-marker-alt me-2"></i>
-                        <img src="<?php echo PUBLIC_PATH; ?>img/mapa.png"  class="contact-icon me-2">
+                        <!--<img src="<?php echo PUBLIC_PATH; ?>img/mapa.png"  class="contact-icon me-2">-->
                         <span>Barranquilla - Colombia</span>
                     </div>
                 </div>

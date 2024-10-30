@@ -1385,90 +1385,122 @@ input:hover, select:hover, textarea:hover {
 
 /* Contenedor de productos */
 .product-container {
-    padding: 20px; /* Espacio interno alrededor del contenido */
-    background-color: white; /* Color de fondo del contenedor */
-    border: none; /* Eliminar borde */
-    box-shadow: none; /* Eliminar sombra */
-    width: 90%; /* Ocupar el 90% del ancho de la pantalla */
-    margin: 20px auto 0; /* Ajustar el margen superior (20px) y centrar el contenedor */
-    /* Opcional: Puedes ajustar el alto mínimo si es necesario */
-    min-height: 500px; /* Establecer un alto mínimo para el contenedor */
+    padding: 1px;
+    background-color: white;
+    border: none;
+    box-shadow: none;
+    width: 90%;
+    margin: 20px auto 0;
+    min-height: 500px;
 }
 
 /* Cards de productos */
 .product-card {
-    background-color: #fff; /* Color de fondo de la tarjeta */
-    border-radius: 1x; /* Bordes redondeados */
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Sombra de la tarjeta */
-    margin-bottom: 30px; /* Espacio inferior entre tarjetas */
-    padding: 15px; /* Espacio interno dentro de la tarjeta */
-    text-align: center; /* Centrar el texto */
-    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: -2px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    min-height: 370px;
+    /*Alturamínimadelatarjeta*/display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*Distribuirespacioentreloselementos*/-webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    -webkit-border-radius: 8px;
 }
 
 .product-card:hover {
-    transform: scale(1.05); /* Efecto de aumento al pasar el cursor */
+    transform: scale(1.05);
 }
 
-/* Imagen de producto */
+/* Imagen de producto - todas las imágenes tendrán el mismo tamaño */
 .product-img {
-    max-width: 100%; /* Asegurarse de que la imagen no exceda el ancho de la tarjeta */
-    height: auto; /* Mantener la proporción de la imagen */
-    border-radius: 8px; /* Bordes redondeados de la imagen */
+    width: 100%; /* Hacer que la imagen ocupe todo el ancho */
+    height: 150px; /* Altura fija */
+    object-fit: cover; /* Ajustar la imagen sin deformarla, recortando si es necesario */
+    border-radius: 8px;
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
 }
 
 /* Estilos para los textos */
 .product-card h5 {
-    font-size: 18px; /* Tamaño del texto del nombre del producto */
-    color: #C60909; /* Color del texto */
-    font-weight: bold; /* Negrita */
+    font-size: 18px;
+    color: #C60909;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 .product-card .price {
-    font-size: 20px; /* Tamaño del texto del precio */
-    color: #C60909; /* Color del texto */
-    font-weight: bold; /* Negrita */
+    font-size: 20px;
+    color: #C60909;
+    font-weight: bold;
+    margin: 10px 0;
 }
 
+/* Descripción truncada a 3 líneas */
 .product-card .description {
-    font-size: 14px; /* Tamaño del texto de la descripción */
-    color: #666; /* Color del texto */
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px; /* Espacio debajo de la descripción */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: calc(1.2em * 3); /* Calcular altura basada en la línea de texto (1.2em por línea, 3 líneas) */
 }
 
 /* Botón de compra */
 .btn-danger {
-    background-color: #C60909; /* Color de fondo del botón */
-    border-color: #C60909; /* Color del borde del botón */
-    font-size: 16px; /* Tamaño del texto del botón */
-    font-weight: bold; /* Negrita */
-    padding: 10px; /* Espacio interno dentro del botón */
+    background-color: #C60909;
+    border-color: #C60909;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: auto; /* Botón se mantiene al fondo de la tarjeta */
 }
 
 .btn-danger:hover {
-    background-color: #a50505; /* Color de fondo del botón al pasar el cursor */
-    border-color: #a50505; /* Color del borde del botón al pasar el cursor */
+    background-color: #a50505;
+    border-color: #a50505;
 }
 
 /* Paginación */
 .pagination {
-    display: flex; /* Usar flexbox para la paginación */
-    justify-content: center; /* Centrar los elementos de paginación */
-    margin-top: 20px; /* Espacio superior */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .pagination a {
-    color: #C60909; /* Color del texto del enlace de paginación */
-    float: left; /* Alinear a la izquierda */
-    padding: 8px 16px; /* Espacio interno alrededor del enlace */
-    text-decoration: none; /* Sin subrayado */
-    border: 1px solid #ddd; /* Borde alrededor del enlace */
-    margin: 0 5px; /* Espacio lateral entre enlaces */
-    border-radius: 5px; /* Bordes redondeados */
+    color: #C60909;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    border-radius: 5px;
 }
 
 .pagination a:hover {
-    background-color: #ddd; /* Color de fondo al pasar el cursor */
+    background-color: #ddd;
 }
+
+/* Enlace activo de paginación */
+.pagination a.active {
+    background-color: #C60909;
+    color: white;
+    border: 1px solid #C60909;
+}
+
+
 
 /************ CSS TABLE DE BANCO DE PROYECTOS ***********************/
 

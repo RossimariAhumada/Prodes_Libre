@@ -21,16 +21,7 @@ $intContact->guardar_producto();
                     <input type="text" id="product-name" name="product-name"
                         placeholder="Ingresa el nombre del producto" required>
                 </div>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="fechaInicio" class="form-label-custom">Fecha de Inicio</label>
-                        <input type="date" class="form-control-custom" id="fechaInicio" name="fechaInicio" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="fechaFin" class="form-label-custom">Fecha de Finalización</label>
-                        <input type="date" class="form-control-custom" id="fechaFin" name="fechaFin" required>
-                    </div>
-                </div>
+                
                 <div class="form-group">
                     <label for="product-value">Valor del Producto</label>
                     <input type="number" id="product-value" name="product-value" placeholder="Ingresa el valor"

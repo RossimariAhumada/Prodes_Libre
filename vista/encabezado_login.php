@@ -36,11 +36,11 @@ $usuario = $menuControl->mostrarMenuUsuario();
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'avances') ? 'active' : ''; ?>"
-                            href="<?php echo BASE_URL . 'Category' . DS . 'avances'; ?>">AVANCES</a>
+                            href="<?php echo BASE_URL . 'Category' . DS . 'avances_login'; ?>">AVANCES</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'noticias') ? 'active' : ''; ?>"
-                            href="<?php echo BASE_URL . 'Category' . DS . 'noticias'; ?>">NOTICIAS</a>
+                            href="<?php echo BASE_URL . 'Category' . DS . 'noticias_login'; ?>">NOTICIAS</a>
                     </li>
                 </ul>
                 <?php endif; ?>
@@ -56,12 +56,12 @@ $usuario = $menuControl->mostrarMenuUsuario();
                             href="<?php echo BASE_URL . 'tienda' . DS . 'producto_login'; ?>">TIENDA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'avances') ? 'active' : ''; ?>"
-                            href="#">AVANCES</a>
+                        <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'avances_login') ? 'active' : ''; ?>"
+                            href="<?php echo BASE_URL . 'Category' . DS . 'avances_login'; ?>#">AVANCES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'noticias') ? 'active' : ''; ?>"
-                            href="#">NOTICIAS</a>
+                        <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'noticias_login') ? 'active' : ''; ?>"
+                            href="<?php echo BASE_URL . 'Category' . DS . 'noticias_login'; ?>">NOTICIAS</a>
                     </li>
                 </ul>
                 <?php endif; ?>
