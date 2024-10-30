@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-10-2024 a las 17:13:06
+-- Tiempo de generación: 30-10-2024 a las 21:58:38
 -- Versión del servidor: 10.4.10-MariaDB
 -- Versión de PHP: 7.3.12
 
@@ -35,9 +35,17 @@ CREATE TABLE `actividad` (
   `fecha_inicio` date NOT NULL,
   `fecha_final` date NOT NULL,
   `detalle_actividad` varchar(1000) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `foto` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `participantes` int(11) NOT NULL
+  `foto` blob NOT NULL,
+  `participantes` int(11) NOT NULL,
+  `id_ods` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `actividad`
+--
+
+INSERT INTO `actividad` (`id_actividad`, `nombre_actividad`, `descripcion_actividad`, `fecha_inicio`, `fecha_final`, `detalle_actividad`, `foto`, `participantes`, `id_ods`) VALUES
+(1, 'Limpieza', 'Limpieza cero', '2024-10-30', '2024-11-30', 'Limpiar todos los barrios urbanos', 0x6c696d7069657a612e706e67, 30, 3);
 
 -- --------------------------------------------------------
 
@@ -62,7 +70,7 @@ CREATE TABLE `banco_proyecto` (
   `id_proyecto` int(11) NOT NULL,
   `nombre_proyecto` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `descripcion_proyecto` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `documento_adjunto` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `documento_adjunto` blob NOT NULL,
   `fecha_inicio` date NOT NULL,
   `fecha_final` date NOT NULL,
   `presupuesto` decimal(15,2) NOT NULL,
@@ -78,8 +86,8 @@ CREATE TABLE `banco_proyecto` (
 --
 
 INSERT INTO `banco_proyecto` (`id_proyecto`, `nombre_proyecto`, `descripcion_proyecto`, `documento_adjunto`, `fecha_inicio`, `fecha_final`, `presupuesto`, `resultados_esperados`, `ubicacion`, `id_ods`, `id_usuario`, `id_estado`) VALUES
-(2, 'Fin de la pobreza', 'si e puede dejar la pobreza', 'fin de la pobreza.pdf', '2024-10-20', '2024-10-30', '1000000.00', 'si se puede', 'Colombia', 1, 1, 2),
-(3, 'Voluntad de vida', 'Voluntad', 'voluntad de vida.pdf', '2024-10-20', '2025-10-20', '15000000.00', 'Buscar y asesorar para dar voluntad de vida', 'Colombia', 3, 1, 1);
+(2, 'Fin de la pobreza', 'si e puede dejar la pobreza', 0x66696e206465206c6120706f6272657a612e706466, '2024-10-20', '2024-10-30', '1000000.00', 'si se puede', 'Colombia', 1, 1, 2),
+(3, 'Voluntad de vida', 'Voluntad', 0x766f6c756e74616420646520766964612e706466, '2024-10-20', '2025-10-20', '15000000.00', 'Buscar y asesorar para dar voluntad de vida', 'Colombia', 3, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -148,7 +156,7 @@ CREATE TABLE `productos` (
   `nombre_prdcto` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `valor_prdcto` decimal(15,2) NOT NULL,
   `descripcion_prdcto` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `foto` varchar(80) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `foto` blob NOT NULL,
   `id_ods` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
@@ -157,13 +165,14 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_prdcto`, `nombre_prdcto`, `valor_prdcto`, `descripcion_prdcto`, `foto`, `id_ods`) VALUES
-(4, 'Bicicletas electricas', '800000.00', 'Bicicletas electricas Nova 350 plomo gel', 'Bicicletas electricas.jfif', 4),
-(5, 'Bicicletas', '367200.00', 'Bicicletas Atila MTB R26 18v', 'bicicletas.jpg', 4),
-(6, 'Kits huertos urbanos', '250000.00', 'Kits para huertos urbanos que incluyen semillas', 'kits huertos urbanos.jfif', 3),
-(7, 'Muebles', '460000.00', 'Muebles fabricados con materiales reciclados', 'muebles.jfif', 1),
-(8, 'Muebles madera', '270000.00', 'Muebles fabricados con materiales reciclados', 'muebles madera.jfif', 3),
-(9, 'paneles solares', '700000.00', 'paneles solares portátiles', 'paneles solares.jfif', 2),
-(10, 'juguetes', '150000.00', 'juguetes hechos de materiales sostenibles como madera o fibras naturales', 'uguetes.jpg', 1);
+(4, 'Bicicletas electricas', '800000.00', 'Bicicletas electricas Nova 350 plomo gel', 0x42696369636c6574617320656c65637472696361732e6a666966, 4),
+(5, 'Bicicletas', '367200.00', 'Bicicletas Atila MTB R26 18v', 0x62696369636c657461732e6a7067, 4),
+(6, 'Kits huertos urbanos', '250000.00', 'Kits para huertos urbanos que incluyen semillas', 0x6b6974732068756572746f7320757262616e6f732e6a666966, 3),
+(7, 'Muebles', '460000.00', 'Muebles fabricados con materiales reciclados', 0x6d7565626c65732e6a666966, 1),
+(8, 'Muebles madera', '270000.00', 'Muebles fabricados con materiales reciclados', 0x6d7565626c6573206d61646572612e6a666966, 3),
+(9, 'paneles solares', '700000.00', 'paneles solares portátiles', 0x70616e656c657320736f6c617265732e6a666966, 2),
+(10, 'juguetes', '150000.00', 'juguetes hechos de materiales sostenibles como madera o fibras naturales', 0x756775657465732e6a7067, 1),
+(11, 'Limpieza', '100000.00', 'd', 0x6c696d7069657a612e706e67, 3);
 
 -- --------------------------------------------------------
 
@@ -259,7 +268,8 @@ INSERT INTO `usuarios` (`id_usuario`, `identificacion`, `nombres`, `correo`, `pa
 (30, '1143165992', 'HJHJHJJN CDDAD', 'HNHNH@GMAIL.COM', '$2a$10$16f071224fdd7f6293aa6O1adbRCaMwVPZu3FptfzMydSJrNadila', '3017046662', 'd', 1, 2),
 (31, '1143165992', 'BBNBNB', 'nmnmnmn@gmail.com', '$2a$10$413a8127f3a5019d7524euzYdf0vd3ZDngwP9faV4OtrrolSe18gi', '3017046662', 'd', 1, 2),
 (32, '1143165992', 'BBNBNBDDDD', 'njnjnjn@gmail.com', '$2a$10$cdae005be925383e7f9b2uK/qlJf0Wl12ph6RcxyTlMc2pizr8yUm', '3017046662', 'd', 1, 2),
-(33, '1143165992', 'Mauricio Alandete', 'mau767@gmail.com', '$2a$10$f23a096f94780e0b7b54aucg7CaZa3ToGVYlBjD6sxVXcXEd5YzkS', '3017046662', 'd', 1, 1);
+(33, '1143165992', 'Mauricio Alandete', 'mau767@gmail.com', '$2a$10$f23a096f94780e0b7b54aucg7CaZa3ToGVYlBjD6sxVXcXEd5YzkS', '3017046662', 'd', 1, 1),
+(34, '1102220215', 'Jennifer Clavi', 'jennifer_clavi@gmail.com', '$2a$10$9970c9410a252d15537fduzE1GcOeTHk4SXn3kE01bN1pWwPxQmOS', '3010012252', 'TV 1BSUR 68B 121 CS ', 1, 2);
 
 --
 -- Índices para tablas volcadas
@@ -269,7 +279,8 @@ INSERT INTO `usuarios` (`id_usuario`, `identificacion`, `nombres`, `correo`, `pa
 -- Indices de la tabla `actividad`
 --
 ALTER TABLE `actividad`
-  ADD PRIMARY KEY (`id_actividad`);
+  ADD PRIMARY KEY (`id_actividad`),
+  ADD KEY `id_ods` (`id_ods`);
 
 --
 -- Indices de la tabla `asignacion_actividad`
@@ -344,7 +355,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `actividad`
 --
 ALTER TABLE `actividad`
-  MODIFY `id_actividad` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_actividad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `asignacion_actividad`
@@ -380,7 +391,7 @@ ALTER TABLE `estado_proyecto`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_prdcto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_prdcto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `rol_usuarios`
@@ -398,11 +409,17 @@ ALTER TABLE `tipo_identificacion`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `actividad`
+--
+ALTER TABLE `actividad`
+  ADD CONSTRAINT `actividad_ibfk_1` FOREIGN KEY (`id_ods`) REFERENCES `entrada_ods` (`id_ods`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `asignacion_actividad`
