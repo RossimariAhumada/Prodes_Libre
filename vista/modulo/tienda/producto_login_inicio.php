@@ -1,5 +1,4 @@
 <?php
-include_once VISTA_PATH . 'encabezado.php';
 require_once CONTROL_PATH . 'consultas_control' . DS . 'producto_control.php';
 
 // Número máximo de productos por página
@@ -27,7 +26,7 @@ $productos = $controller->obtenerProductosPaginados($inicio, $productosPorPagina
         <?php foreach ($productos as $producto): ?>
         <div class="col-md-3">
             <div class="product-card">
-                <img src="../vista/documentos/products/<?= $producto['foto'] ?>" class="product-img img-fluid"
+                <img src="vista/documentos/products/<?= $producto['foto'] ?>" class="product-img img-fluid"
                     alt="Imagen del producto">
                 <h5 class="mt-2"><?= $producto['nombre_prdcto'] ?></h5>
                 <p class="price">$<?= number_format($producto['valor_prdcto'], 2) ?></p>
@@ -57,7 +56,7 @@ $productos = $controller->obtenerProductosPaginados($inicio, $productosPorPagina
     </div>
 </div>
 
-<!-- Superposición para la animación de redirección -->
+<!-- Superposición para la animación de redirección 
 <div id="overlay" class="overlaay d-none">
     <div class="overlay-content">
         <div class="spinner-border text-light" role="status">
@@ -65,7 +64,7 @@ $productos = $controller->obtenerProductosPaginados($inicio, $productosPorPagina
         </div>
         <p class="mt-3">Redirigiendo a la página de inicio de sesión...</p>
     </div>
-</div>
+</div>-->
 
 <!-- Script para mostrar el overlay y redirigir -->
 <script>

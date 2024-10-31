@@ -32,7 +32,10 @@ $productos = $controller->obtenerProductosPaginados($inicio, $productosPorPagina
                 <h5 class="mt-2"><?= $producto['nombre_prdcto'] ?></h5>
                 <p class="price">$<?= number_format($producto['valor_prdcto'], 2) ?></p>
                 <p class="description"><?= $producto['descripcion_prdcto'] ?></p>
-                <button class="btn btn-danger btn-block">Comprar</button>
+
+                <!-- Botón de comprar -->
+                <button class="btn btn-danger btn-block comprar-btn"
+                    data-producto="<?= $producto['nombre_prdcto'] ?>">Comprar</button>
             </div>
         </div>
         <?php endforeach; ?>
@@ -53,4 +56,36 @@ $productos = $controller->obtenerProductosPaginados($inicio, $productosPorPagina
         <?php endif; ?>
     </div>
 </div>
-<?php include_once VISTA_PATH . 'pie.php';?>
+
+<!-- Superposición para la animación de redirección -->
+<div id="overlay" class="overlaay d-none">
+    <div class="overlay-content">
+        <div class="spinner-border text-light" role="status">
+            <span class="visually-hidden">Cargando...</span>
+        </div>
+        <p class="mt-3">Redirigiendo a la página de inicio de sesión...</p>
+    </div>
+</div>
+
+<!-- Script para mostrar el overlay y redirigir -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtener todos los botones de "Comprar"
+    const botonesComprar = document.querySelectorAll('.comprar-btn');
+
+    // Agregar evento click a cada botón
+    botonesComprar.forEach(boton => {
+        boton.addEventListener('click', function() {
+            // Mostrar el overlay
+            const overlay = document.getElementById('overlay');
+            overlay.classList.remove('d-none');
+
+            // Redirigir después de 2 segundos
+            setTimeout(() => {
+                window.location.href = "<?php echo BASE_URL . 'login_page'; ?>";
+            }, 2000); // Ajusta el tiempo de espera aquí (en milisegundos)
+        });
+    });
+});
+</script>
+<?php include_once VISTA_PATH . 'pie.php'; ?>
