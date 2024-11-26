@@ -18,7 +18,7 @@ $usuario = $menuControl->mostrarMenuUsuario();
 
             <!-- Enlaces de navegación -->
             <div class="collapse navbar-collapse justify-content-center mx-5" id="navbarNav">
-<!--------------------------------------------------------------------MENU ADMINISTRADOR------------------------------------------------------------->
+                <!----------------------------------------------MENU ADMINISTRADOR------------------------------------------------------------->
                 <?php if ($usuario['id_rol'] == 1): // Administrador ?>
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -30,6 +30,12 @@ $usuario = $menuControl->mostrarMenuUsuario();
                         <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'agregar_producto') ? 'active' : ''; ?>"
                             href="<?php echo BASE_URL . 'gestion' . DS . 'agregar_producto'; ?>">PRODUCTOS</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'compras_realizadas') ? 'active' : ''; ?>"
+                            href="<?php echo BASE_URL . 'tienda' . DS . 'compras_realizadas'; ?>">COMPRAS</a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'agregar_actividad') ? 'active' : ''; ?>"
                             href="<?php echo BASE_URL . 'gestion' . DS . 'agregar_actividad'; ?>">ACTIVIDADES</a>
@@ -44,17 +50,23 @@ $usuario = $menuControl->mostrarMenuUsuario();
                     </li>
                 </ul>
                 <?php endif; ?>
-<!--------------------------------------------------------------------MENU VISITANTE------------------------------------------------------------->
+                <!-----------------------------------------------MENU VISITANTE------------------------------------------------------------->
                 <?php if ($usuario['id_rol'] == 2): // Visitante ?>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'banco_proyecto' || $_SERVER['REQUEST_URI'] == '/Prodes_Libre/') ? 'active' : ''; ?>"
-                            href="<?php echo BASE_URL . 'gestion' . DS . 'banco_proyecto'; ?>">BANCO PROYECTO</a>
+                        <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'ingreso_inicio' || $_SERVER['REQUEST_URI'] == '/Prodes_Libre/') ? 'active' : ''; ?>"
+                            href="<?php echo BASE_URL . 'tienda' . DS . 'ingreso_inicio'; ?>">TIENDA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'producto_login') ? 'active' : ''; ?>"
-                            href="<?php echo BASE_URL . 'tienda' . DS . 'producto_login'; ?>">TIENDA</a>
+                        <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'banco_proyecto') ? 'active' : ''; ?>"
+                            href="<?php echo BASE_URL . 'gestion' . DS . 'banco_proyecto'; ?>">BANCO PROYECTO</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'compras') ? 'active' : ''; ?>"
+                            href="<?php echo BASE_URL . 'tienda' . DS . 'compras'; ?>">COMPRAS REALIZADAS</a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'avances_login') ? 'active' : ''; ?>"
                             href="<?php echo BASE_URL . 'Category' . DS . 'avances_login'; ?>#">AVANCES</a>
@@ -63,15 +75,13 @@ $usuario = $menuControl->mostrarMenuUsuario();
                         <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'noticias_login') ? 'active' : ''; ?>"
                             href="<?php echo BASE_URL . 'Category' . DS . 'noticias_login'; ?>">NOTICIAS</a>
                     </li>
+
                 </ul>
                 <?php endif; ?>
             </div>
 
             <!-- Iconos de usuario y carrito -->
             <div class="user-icons d-flex align-items-center m-2" id="icon-container">
-                <a href="#">
-                    <img src="<?php echo PUBLIC_PATH; ?>img/bolsa.png" alt="Carrito" class="cart-icon me-3">
-                </a>
                 <img src="<?php echo PUBLIC_PATH . 'img/perfil.png'; ?>" alt="Usuario" class="user-icon"
                     onclick="toggleProfile()">
 

@@ -40,8 +40,17 @@ $proyectos = $proyectoController->obtenerProyectosPorUsuario($id_usuario);
                     <td><?php echo $proyecto['nombre_ods']; // Mostramos el nombre del ODS ?></td>
                     <td><?php echo $proyecto['fecha_inicio']; ?></td>
                     <td><?php echo $proyecto['descripcion_estado']; // Mostramos la descripción del estado ?></td>
-                    <td><input type="checkbox" <?php echo ($proyecto['id_estado'] == 2) ? 'checked' : ''; ?> disabled>
+                    <td>
+                        <?php if ($proyecto['id_estado'] == 2): ?>
+                        <input type="checkbox" checked disabled>
+                        <?php elseif ($proyecto['id_estado'] == 3): ?>
+                        <!-- Mostrar una X en lugar del checkbox -->
+                        <span style="font-size: 1.3em; color: red;">X</span>
+                        <?php else: ?>
+                        <input type="checkbox" disabled>
+                        <?php endif; ?>
                     </td>
+
                 </tr>
                 <?php endforeach; ?>
                 <?php else: ?>

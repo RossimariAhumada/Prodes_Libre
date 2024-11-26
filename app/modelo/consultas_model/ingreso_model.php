@@ -40,7 +40,7 @@ class IngresoModel extends CnxClass {
 
     public static function obtenerDatosUsuario($id_usuario) {
         $cnx = CnxClass::singleton_conexion();
-        $cmd = 'SELECT u.nombres, r.descripcion, u.id_rol FROM usuarios u INNER JOIN rol_usuarios r ON u.id_rol = r.codigo_rol WHERE u.id_usuario = :id_usuario';
+        $cmd = 'SELECT u.id_usuario,u.nombres,u.identificacion,u.direccion,u.telefono, r.descripcion, u.id_rol FROM usuarios u INNER JOIN rol_usuarios r ON u.id_rol = r.codigo_rol WHERE u.id_usuario = :id_usuario';
         try {
             $preparado = $cnx->preparar($cmd);
             $preparado->bindParam(':id_usuario', $id_usuario);

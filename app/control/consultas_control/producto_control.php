@@ -39,5 +39,30 @@ class ProductoController {
         $resultado = $preparado->fetch();
         return $resultado['total'];
     }
+
+// Método para obtener los datos de un producto en base a su ID
+public function mostrarProducto($id_prdcto) {
+    $cnx = CnxClass::singleton_conexion();
+    // Verificar si el producto existe
+    if ($id_prdcto) {
+        // Cambiar ProductoModel por Producto (que es el nombre correcto de tu clase)
+        $datosProducto = Producto::obtenerDatosProducto($id_prdcto); 
+        if ($datosProducto) {
+            return $datosProducto; // Devuelve los datos del producto
+        } else {
+            // Producto no encontrado
+            header('Location: ' . BASE_URL . 'inicio'); // Redirige si no encuentra el producto
+            exit();
+        }
+    } else {
+        // Si no se pasa el id del producto
+        header('Location: ' . BASE_URL . 'inicio');
+        exit();
+    }
+}
+    // Evitar la clonación del objeto
+    public function __clone() {
+        trigger_error('La clonación de este objeto no está permitida', E_USER_ERROR);
+    }
 }
 ?>

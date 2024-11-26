@@ -1,21 +1,25 @@
 <?php
+define('DS', DIRECTORY_SEPARATOR);
+define('ROOT', '..' . DS . '..' . DS . '..');
+require_once '..'.DS.'..'.DS.'..'.DS.'app' . DS . 'config' . DS . 'Config.php';
 require_once CONTROL_PATH . 'consultas_control' . DS . 'banco_proyecto_controlador.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id_proyecto = intval($_POST['id_proyecto']);
-    $nuevo_estado = intval($_POST['nuevo_estado']);
+    $id_proyecto = $_POST['id_proyecto'] ?? null;
+    $id_estado = $_POST['id_estado'] ?? null;
 
-    error_log("ID Proyecto: $id_proyecto, Nuevo Estado: $nuevo_estado"); // Depuración
+    if ($id_proyecto && $id_estado) {
+        $proyectoController = BancoProyectoController::singleton_conexion();
+        $resultado = $proyectoController->actualizarEstadoProyecto($id_proyecto, $id_estado);
 
-    // Instanciar el controlador y actualizar el estado
-    $proyectoController = BancoProyectoController::singleton_conexion();
-    $resultado = $proyectoController->actualizarEstadoProyecto($id_proyecto, $nuevo_estado);
-
-    if ($resultado) {
-        echo "El estado del proyecto se ha actualizado correctamente.";
+        if ($resultado) {
+            echo json_encode(['success' => true]);
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Error al actualizar el estado.']);
+        }
     } else {
-        echo "Error al actualizar el estado del proyecto.";
+        echo json_encode(['success' => false, 'message' => 'Faltan parámetros.']);
     }
+} else {
+    echo json_encode(['success' => false, 'message' => 'Método no permitido.']);
 }
-
-?>

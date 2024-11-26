@@ -1638,3 +1638,75 @@ input[type="checkbox"]:checked::before {
         transform: rotate(360deg);
     }
 }
+
+/* Clase personalizada para el botón */
+.btn-custom {
+    width: 150px; /* Ancho fijo de 150 píxeles */
+    padding: 10px 20px;     /* Ajusta el padding para cambiar la altura y el ancho interno del botón */
+    font-size: 14px;        /* Tamaño de la fuente */
+    text-align: center;     /* Alinea el texto al centro */
+    background-color: #c60909; /* Color de fondo (puedes cambiarlo) */
+    color: white;           /* Color del texto */
+    border: none;           /* Quita el borde */
+    border-radius: 5px;     /* Bordes redondeados */
+    cursor: pointer;        /* Cambia el cursor cuando el mouse está sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+/* Efecto hover para el botón */
+.btn-custom:hover {
+    background-color: #b50808; /* Color de fondo cuando se pasa el mouse (puedes cambiarlo) */
+}
+
+.pagination .page-item .page-link {
+    color: #c60909; /* Color del texto de los enlaces */
+    border: 1px solid #c60909; /* Borde del enlace */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #c60909; /* Color de fondo del enlace activo */
+    border-color: #c60909; /* Borde del enlace activo */
+    color: white; /* Color del texto del enlace activo */
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: #e11b1b; /* Color de fondo al pasar el cursor */
+    border-color: #e11b1b; /* Color del borde al pasar el cursor */
+    color: white; /* Color del texto al pasar el cursor */
+}
+.btn-custom {
+    background-color: #c60909;
+    color: white;
+    width: auto; /* Ajusta el ancho a su contenido */
+    padding: 5px 10px; /* Puedes ajustar el padding para que el botón sea más estrecho o más ancho */
+}
+
+.btn-custom:hover {
+    background-color: #a60707; /* color más oscuro para el hover */
+}
+
+/* Estilos para los botones */
+.btn-success1 {
+    background-color: #c60909;
+    border-color: #c60909;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    transition: all 0.3s ease;
+}
+
+.btn-success1:hover {
+    background-color: #a20707;
+    border-color: #a20707;
+    color: #fff;
+}
+
+.text-center-buttons {
+    text-align: center; /* Centra el contenido dentro del contenedor */
+}
+
+form .btn {
+    margin: 5px; /* Espaciado entre botones */
+}
+
+

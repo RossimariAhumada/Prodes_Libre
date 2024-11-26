@@ -32,9 +32,10 @@ $productos = $controller->obtenerProductosPaginados($inicio, $productosPorPagina
                 <p class="price">$<?= number_format($producto['valor_prdcto'], 2) ?></p>
                 <p class="description"><?= $producto['descripcion_prdcto'] ?></p>
 
-                <!-- Botón de comprar -->
-                <button class="btn btn-danger btn-block comprar-btn"
-                    data-producto="<?= $producto['nombre_prdcto'] ?>">Comprar</button>
+                <!-- Botón de comprar con el id del producto como atributo de datos -->
+                <button class="btn btn-danger btn-block comprar-btn" data-id="<?= $producto['id_prdcto'] ?>" 
+                        data-producto="<?= $producto['nombre_prdcto'] ?>"
+                        data-valor="<?= $producto['valor_prdcto'] ?>">Comprar</button>
             </div>
         </div>
         <?php endforeach; ?>
@@ -56,16 +57,6 @@ $productos = $controller->obtenerProductosPaginados($inicio, $productosPorPagina
     </div>
 </div>
 
-<!-- Superposición para la animación de redirección 
-<div id="overlay" class="overlaay d-none">
-    <div class="overlay-content">
-        <div class="spinner-border text-light" role="status">
-            <span class="visually-hidden">Cargando...</span>
-        </div>
-        <p class="mt-3">Redirigiendo a la página de inicio de sesión...</p>
-    </div>
-</div>-->
-
 <!-- Script para mostrar el overlay y redirigir -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -75,16 +66,16 @@ document.addEventListener("DOMContentLoaded", function() {
     // Agregar evento click a cada botón
     botonesComprar.forEach(boton => {
         boton.addEventListener('click', function() {
-            // Mostrar el overlay
-            const overlay = document.getElementById('overlay');
-            overlay.classList.remove('d-none');
+            // Obtener datos del producto
+            const idPrdcto = this.getAttribute('data-id');
+            const producto = this.getAttribute('data-producto');
+            const valor = this.getAttribute('data-valor');
 
-            // Redirigir después de 2 segundos
-            setTimeout(() => {
-                window.location.href = "<?php echo BASE_URL . 'login_page'; ?>";
-            }, 2000); // Ajusta el tiempo de espera aquí (en milisegundos)
+            // Redirigir a la vista datos_compra con los parámetros
+            window.location.href = `<?php echo BASE_URL . 'datos_compra'; ?>?id_prdcto=${encodeURIComponent(idPrdcto)}&producto=${encodeURIComponent(producto)}&valor=${encodeURIComponent(valor)}`;
         });
     });
 });
 </script>
+
 <?php include_once VISTA_PATH . 'pie.php'; ?>

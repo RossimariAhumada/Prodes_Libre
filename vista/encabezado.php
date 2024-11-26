@@ -14,9 +14,6 @@
             </button>
             <!-- Iconos de carrito y usuario -->
             <div class="d-flex align-items-center m-2" id="icon-container">
-                <a href="#">
-                    <img src="<?php echo PUBLIC_PATH; ?>img/bolsa.png" alt="Carrito" class="me-3" style="width: 30px;">
-                </a>
                 <a href="<?php echo BASE_URL . 'login_page'; ?>">
                     <img src="<?php echo PUBLIC_PATH; ?>img/usuario.png" alt="Login" style="width: 30px;">
                 </a>
@@ -62,7 +59,7 @@
                 </li>
                 <li class="nav-item">
                     <!-- Verifica si la página actual es 'bancos' y añade la clase 'active' si es así -->
-                    <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'tienda') ? 'active' : ''; ?>"
+                    <a class="nav-link nav-hover <?php echo (basename($_SERVER['REQUEST_URI']) == 'producto') ? 'active' : ''; ?>"
                         href="<?php echo BASE_URL . 'tienda' . DS . 'producto'; ?>">TIENDA</a>
                 </li>
                 <li class="nav-item">

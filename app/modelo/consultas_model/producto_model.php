@@ -44,5 +44,32 @@ class Producto extends CnxClass {
         $cnx->closed();
         $cnx = null;
     }
+    public static function obtenerDatosProducto($id_prdcto) {
+        $cnx = CnxClass::singleton_conexion();
+        $cmd = 'SELECT u.id_prdcto,u.nombre_prdcto, u.valor_prdcto, u.descripcion_prdcto, r.nombre_ods,r.id_ods 
+                FROM productos u 
+                INNER JOIN entrada_ods r ON u.id_ods = r.id_ods 
+                WHERE u.id_prdcto = :id_prdcto';
+        try {
+            $preparado = $cnx->preparar($cmd);
+            $preparado->bindParam(':id_prdcto', $id_prdcto, PDO::PARAM_INT);
+            if ($preparado->execute()) {
+                if ($preparado->rowCount() == 1) {
+                    return $preparado->fetch(PDO::FETCH_ASSOC); // Devuelve los datos del producto
+                } else {
+                    return false; // No se encontró el producto
+                }
+            } else {
+                return false; // Error al ejecutar la consulta
+            }
+        } catch (PDOException $e) {
+            print "Error!: " . $e->getMessage();
+            return false; // Manejo del error
+        } finally {
+            $cnx = null;
+        }
+    }
 }
+
+
 ?>
